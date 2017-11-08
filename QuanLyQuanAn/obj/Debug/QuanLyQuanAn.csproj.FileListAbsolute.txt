@@ -1,0 +1,15 @@
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\bin\Debug\QuanLyQuanAn.exe.config
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\bin\Debug\QuanLyQuanAn.exe
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\bin\Debug\QuanLyQuanAn.pdb
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.csprojResolveAssemblyReference.cache
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.addChiPhiPhatSinh.resources
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.chiNhanh.resources
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.doiMK.resources
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.showChiPhiPhatSinhmonth.resources
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.DangNhap.resources
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.Properties.Resources.resources
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.QuanLy.resources
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.tongDai.resources
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.csproj.GenerateResource.Cache
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.exe
+C:\Users\Ahhh\OneDrive\C#\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.pdb
