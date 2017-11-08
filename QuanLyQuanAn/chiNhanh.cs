@@ -182,6 +182,7 @@ namespace QuanLyQuanAn
                     {
                         hoaDon.Items.Remove(hoaDon.SelectedItems[0]);
                         i--;
+                       
                     }
             }
         }
