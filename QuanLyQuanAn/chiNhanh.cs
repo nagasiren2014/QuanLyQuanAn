@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
+using static System.String;
 
 namespace QuanLyQuanAn
 {
@@ -14,18 +16,15 @@ namespace QuanLyQuanAn
     {
         int i = 0;
         int j = 1;
-        ListViewItem item;
+        DataTable mn;
         public chiNhanh()
         {
             InitializeComponent();
         }
 
-        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
-       
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -60,7 +59,7 @@ namespace QuanLyQuanAn
         private void button8_Click(object sender, EventArgs e)
         {
 
-            showChiPhiPhatSinhmonth ps = new showChiPhiPhatSinhmonth();
+            showChiPhiPhatSinh ps = new showChiPhiPhatSinh();
 
             ps.ShowDialog();
             ps.Hide();
@@ -84,7 +83,7 @@ namespace QuanLyQuanAn
 
         }
 
-  
+
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -105,41 +104,62 @@ namespace QuanLyQuanAn
             System.Windows.Forms.Application.Exit();
         }
 
-        public void AddItem(ListViewItem item )
+        public void AddItem()
         {
             j = 1;
-            hoaDon.Items.Add(item.Text);
+            hoaDon.Items.Add(dgvMenu.SelectedRows[0].Cells["TenMonAn"].Value.ToString());
             hoaDon.Items[i].SubItems.Add("1");
-            hoaDon.Items[i].SubItems.Add(item.SubItems[1].Text);
-            hoaDon.Items[i].SubItems.Add(item.SubItems[2].Text);
-            i++;//Tang so luong mon an (khac nhau) // Tang so hang
+            hoaDon.Items[i].SubItems.Add(dgvMenu.SelectedRows[0].Cells["DVT"].Value.ToString());
+            hoaDon.Items[i].SubItems.Add(dgvMenu.SelectedRows[0].Cells["DonGia"].Value.ToString());
+            i++;//Tang so luong mon an (khac nhau) // Tăng số hàng
         }
+
+        public void tongTien()
+        {
+            int tc = 0;
+            for (int u = 0; u < i; u++)
+            {
+                tc = tc + int.Parse(hoaDon.Items[u].SubItems[3].Text);
+                tbxTongCong.Text = (tc).ToString();
+            }
+            if (tc == 0)
+                tbxTongCong.Text = "0";
+            tc = (int.Parse(tbxTongCong.Text) + int.Parse(tbxPhiDichVu.Text));
+            tbxTongCong.Text = (tc - tc * int.Parse(tbxGiamGia.Text) / 100).ToString();
+        }
+
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-        
-             item = menuCN.SelectedItems[0];
-            ListViewItem temp = new ListViewItem() ;
-           
+            if (dgvMenu.SelectedRows.Count == 1)
+            {
+                
+
+                ListViewItem temp = new ListViewItem();
+
                 int k;
                 for (k = 0; k < i; k++)// chay tu dong 0 den dong thu i-1 
                 {
-                temp = hoaDon.Items[k];
-                if (item.Text == temp.Text)
+                    temp = hoaDon.Items[k];
+                    if (dgvMenu.SelectedRows[0].Cells["TenMonAn"].Value.ToString() == temp.Text)
                     {
                         j++;
                         hoaDon.Items[k].SubItems[1].Text = j.ToString();
-         
-                        int cost = int.Parse(item.SubItems[2].Text) * j;//tinh tien nhieu mon
-                        hoaDon.Items[k].SubItems[3].Text = cost.ToString();       
+
+                        int cost = int.Parse(dgvMenu.SelectedRows[0].Cells["DonGia"].Value.ToString()) * j;//tinh tien nhieu mon
+                        hoaDon.Items[k].SubItems[3].Text = cost.ToString();
                         break;
                     }
                 }
                 if (k == i)
                 {
-                AddItem(item);
+                    AddItem();
                 }
+                tongTien();
             }
+            else
+                MessageBox.Show("Chọn ít thôi mẹ !");
+        }
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
@@ -148,9 +168,10 @@ namespace QuanLyQuanAn
                 hoaDon.Items.Remove(hoaDon.SelectedItems[0]);
                 i--;//giam so luong mon an (khac nhau)
             }
+            tongTien();
         }
 
-      
+
 
         private void btn_bot_Click(object sender, EventArgs e)
         {
@@ -160,13 +181,14 @@ namespace QuanLyQuanAn
 
                 if (sl > 1)//neu so luong mon > 1
                 {
-                    item = hoaDon.SelectedItems[0];
+                    ListViewItem temp;
+                    temp = hoaDon.SelectedItems[0];
                     int dongia = 1;
-                    for (int i = 0; i < menuCN.Items.Count; i++)//tim don gia cua mon duoc chon ben menu
+                    for (int i = 0; i < dgvMenu.Rows.Count; i++)//tim don gia cua mon duoc chon ben menu
                     {
-                        if (item.Text == menuCN.Items[i].Text)
+                        if (temp.Text == dgvMenu.Rows[i].Cells["TenMonAn"].Value.ToString())
                         {
-                            dongia = Convert.ToInt32(menuCN.Items[i].SubItems[2].Text);//tim dc thi break
+                            dongia = Convert.ToInt32(dgvMenu.Rows[i].Cells["DonGia"].Value.ToString());//tim dc thi break
                             break;
                         }
                     }
@@ -182,8 +204,16 @@ namespace QuanLyQuanAn
                     {
                         hoaDon.Items.Remove(hoaDon.SelectedItems[0]);
                         i--;
-                       
+
                     }
+                tongTien();
+            }
+            else
+            {
+                if (hoaDon.Items.Count == 0)
+                    MessageBox.Show("Có gì đâu mà bớt =='");
+                else
+                    MessageBox.Show("Bớt ít hoy má !");
             }
         }
 
@@ -194,7 +224,44 @@ namespace QuanLyQuanAn
 
         private void chiNhanh_Load(object sender, EventArgs e)
         {
+            mn = DocBangMonAn();
+            dgvMenu.DataSource = mn;
+            tbxMaNV.Text = bientoancuc.MaNV;
+            tbxMaCN.Text = bientoancuc.MaCN;
+            tbxTenNV.Text = bientoancuc.TenNhanVien;
+        }
+
+        public DataTable DocBangMonAn()
+        {
+            OleDbConnection oleConnection = new OleDbConnection();
+            oleConnection.ConnectionString = "Provider=SQLNCLI11;Data Source=VAIO;Integrated Security=SSPI;Initial Catalog=QLQA";
+            OleDbCommand oleSelectCommand = new OleDbCommand();
+            oleSelectCommand.Connection = oleConnection;
+            oleSelectCommand.CommandText = "Select * From MonAn";
+            OleDbDataAdapter oleDataAdapter = new OleDbDataAdapter();
+            oleDataAdapter.SelectCommand = oleSelectCommand;
+
+            DataTable dt = new DataTable();
+            oleDataAdapter.Fill(dt);
+            return dt;
 
         }
+
+        private void tbxPhiDichVu_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxPhiDichVu.Text == "")
+                tbxPhiDichVu.Text = "0";
+            tongTien();
+        }
+
+        private void tbxGiamGia_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxGiamGia.Text == "")
+                tbxGiamGia.Text = "0";
+            tongTien();
+        }
+
+        
     }
+   
 }

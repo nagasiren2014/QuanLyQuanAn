@@ -42,6 +42,8 @@
             this.tk.Name = "tk";
             this.tk.Size = new System.Drawing.Size(190, 25);
             this.tk.TabIndex = 0;
+            this.tk.Text = "Nhập mã nhân viên";
+            this.tk.Click += new System.EventHandler(this.tk_Click);
             // 
             // mk
             // 

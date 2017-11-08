@@ -1,6 +1,6 @@
 ﻿namespace QuanLyQuanAn
 {
-    partial class showChiPhiPhatSinhmonth
+    partial class showChiPhiPhatSinh
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(151, 9);
+            this.label1.Location = new System.Drawing.Point(141, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 25);
             this.label1.TabIndex = 2;
@@ -173,16 +173,15 @@
             this.tabPage2.Text = "Tháng";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // showChiPhiPhatSinhmonth
+            // showChiPhiPhatSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 493);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
-            this.Name = "showChiPhiPhatSinhmonth";
+            this.Name = "showChiPhiPhatSinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "addChiPhiPhatSinhmonth";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);

@@ -51,6 +51,7 @@
     <Compile Include="addChiPhiPhatSinh.Designer.cs">
       <DependentUpon>addChiPhiPhatSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="bientoancuc.cs" />
     <Compile Include="chiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +63,11 @@
     </Compile>
     <Compile Include="doiMK.Designer.cs">
       <DependentUpon>doiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>menu.xsd</DependentUpon>
     </Compile>
     <Compile Include="showChiPhiPhatSinhmonth.cs">
       <SubType>Form</SubType>
@@ -128,6 +134,17 @@
     <EmbeddedResource Include="xemHoaDon.resx">
       <DependentUpon>xemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="menu.xsc">
+      <DependentUpon>menu.xsd</DependentUpon>
+    </None>
+    <None Include="menu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>menu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="menu.xss">
+      <DependentUpon>menu.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

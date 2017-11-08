@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyQuanAn
 {
-    public partial class showChiPhiPhatSinhmonth : Form
+    public partial class showChiPhiPhatSinh : Form
     {
-        public showChiPhiPhatSinhmonth()
+        public showChiPhiPhatSinh()
         {
             InitializeComponent();
         }
