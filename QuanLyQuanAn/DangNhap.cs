@@ -19,7 +19,7 @@ namespace QuanLyQuanAn
             
         }
 
-
+        
 
      
 
@@ -78,7 +78,7 @@ namespace QuanLyQuanAn
                     {
                         this.Hide();
                         cn.Show();
-                        bientoancuc.MaNV = "taideptraivl";
+                        bientoancuc.MaNV = tk.Text;
                         bientoancuc.TenNhanVien = bientoancuc.dsNhanVien.Rows[i]["TenNhanVien"].ToString();
                         bientoancuc.MaCN = bientoancuc.dsNhanVien.Rows[i]["MaChiNhanh"].ToString();
                     }
