@@ -9,12 +9,8 @@ namespace QuanLyQuanAn
 {
     class bientoancuc
     {
-      
-            public static DataTable dsNhanVien;
-            public static string MaNV;
-            public static string TenNhanVien;
-            public static string MaCN;
-
-        
+        public static DataTable dsNhanVien;
+        public static string MaNV, TenNhanVien, MaCN;
     }
+
 }
