@@ -17,6 +17,7 @@ namespace QuanLyQuanAn
         int i = 0;
         int j = 1;
         DataTable mn;
+        DataView dv;
         public chiNhanh()
         {
             InitializeComponent();
@@ -226,6 +227,7 @@ namespace QuanLyQuanAn
         {
             mn = DocBangMonAn();
             dgvMenu.DataSource = mn;
+            
             tbxMaNV.Text = bientoancuc.MaNV;
             tbxMaCN.Text = bientoancuc.MaCN;
             tbxTenNV.Text = bientoancuc.TenNhanVien;
@@ -261,7 +263,11 @@ namespace QuanLyQuanAn
             tongTien();
         }
 
-        
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%'", tbxSearch.Text);
+            
+        }
     }
    
 }

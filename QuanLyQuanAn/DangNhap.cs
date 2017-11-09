@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using static System.String;
 namespace QuanLyQuanAn
 {
     public partial class DangNhap : Form
@@ -19,7 +18,7 @@ namespace QuanLyQuanAn
             
         }
 
-        
+        DataTable dsNhanVien;
 
      
 
@@ -35,7 +34,7 @@ namespace QuanLyQuanAn
         
         private void DangNhap_Load(object sender, EventArgs e)
         {
-            bientoancuc.dsNhanVien = DocBangNV();
+            dsNhanVien = DocBangNV();
 
         }
 
@@ -64,23 +63,25 @@ namespace QuanLyQuanAn
         {
             
            chiNhanh cn = new chiNhanh();
+         
             QuanLy ql = new QuanLy();
             tongDai td = new tongDai();
 
-            for (int i = 0; i < bientoancuc.dsNhanVien.Rows.Count; i++)
+            for (int i = 0; i < dsNhanVien.Rows.Count; i++)
             {
-                string s = bientoancuc.dsNhanVien.Rows[i]["MaNhanVien"].ToString();
-                if (tk.Text == s && mk.Text == bientoancuc.dsNhanVien.Rows[i]["MatKhau"].ToString())
+                string s = dsNhanVien.Rows[i]["MaNhanVien"].ToString();
+                if (tk.Text == s && mk.Text == dsNhanVien.Rows[i]["MatKhau"].ToString())
                 {
-                    
+
                     if (s[0] == 'C' && s[1] == 'N')
 
                     {
+                        
+                        bientoancuc.MaNV = tk.Text;
+                        bientoancuc.TenNhanVien = dsNhanVien.Rows[i]["TenNhanVien"].ToString();
+                        bientoancuc.MaCN = dsNhanVien.Rows[i]["MaChiNhanh"].ToString();
                         this.Hide();
                         cn.Show();
-                        bientoancuc.MaNV = tk.Text;
-                        bientoancuc.TenNhanVien = bientoancuc.dsNhanVien.Rows[i]["TenNhanVien"].ToString();
-                        bientoancuc.MaCN = bientoancuc.dsNhanVien.Rows[i]["MaChiNhanh"].ToString();
                     }
                     else
                         if (s[0] == 'Q' && s[1] == 'L')
@@ -96,7 +97,7 @@ namespace QuanLyQuanAn
                     }
                     break;
                 }
-                if (i == bientoancuc.dsNhanVien.Rows.Count - 1)
+                if (i == dsNhanVien.Rows.Count - 1)
                     MessageBox.Show("Sai tài khoản hoặc mật khẩu !", "Thông báo", MessageBoxButtons.OK);
             }
 

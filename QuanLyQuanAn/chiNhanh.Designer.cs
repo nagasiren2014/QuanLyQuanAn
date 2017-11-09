@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
             this.hoaDon = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -102,12 +102,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Tìm:";
             // 
-            // textBox1
+            // tbxSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(765, 229);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 20);
-            this.textBox1.TabIndex = 2;
+            this.tbxSearch.Location = new System.Drawing.Point(765, 229);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(231, 20);
+            this.tbxSearch.TabIndex = 2;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
             // hoaDon
             // 
@@ -671,7 +672,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_them);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -697,7 +698,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.ListView hoaDon;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button btn_them;
