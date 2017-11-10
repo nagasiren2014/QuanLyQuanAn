@@ -16,8 +16,8 @@ namespace QuanLyQuanAn
     {
         int i = 0;
         int j = 1;
-        DataTable mn;
-        DataView dv;
+       
+      
         public chiNhanh()
         {
             InitializeComponent();
@@ -57,18 +57,7 @@ namespace QuanLyQuanAn
                 soBan.Enabled = false;
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-            showChiPhiPhatSinh ps = new showChiPhiPhatSinh();
-
-            ps.ShowDialog();
-            ps.Hide();
-
-
-
-
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -159,7 +148,7 @@ namespace QuanLyQuanAn
                 tongTien();
             }
             else
-                MessageBox.Show("Chọn ít thôi mẹ !");
+                MessageBox.Show("Chọn ít hoy !");
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
@@ -214,7 +203,11 @@ namespace QuanLyQuanAn
                 if (hoaDon.Items.Count == 0)
                     MessageBox.Show("Có gì đâu mà bớt =='");
                 else
+                    if (hoaDon.SelectedItems.Count > 1)
                     MessageBox.Show("Bớt ít hoy má !");
+                else
+                    if (hoaDon.SelectedItems.Count == 0)
+                    MessageBox.Show("Chưa chọn sao bớt :| ");
             }
         }
 
@@ -225,12 +218,14 @@ namespace QuanLyQuanAn
 
         private void chiNhanh_Load(object sender, EventArgs e)
         {
-            mn = DocBangMonAn();
-            dgvMenu.DataSource = mn;
-            
+            bientoancuc.mn = DocBangMonAn();
+            dgvMenu.DataSource = bientoancuc.mn;
+           
+
             tbxMaNV.Text = bientoancuc.MaNV;
             tbxMaCN.Text = bientoancuc.MaCN;
             tbxTenNV.Text = bientoancuc.TenNhanVien;
+            bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);
         }
 
         public DataTable DocBangMonAn()
@@ -265,7 +260,25 @@ namespace QuanLyQuanAn
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {
-            mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%'", tbxSearch.Text);
+            if(tbxSearch.Text != "")
+            bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%'", tbxSearch.Text);
+            else
+                bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chiNhanh_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void tạoTàiKhoảnMớiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             
         }
     }

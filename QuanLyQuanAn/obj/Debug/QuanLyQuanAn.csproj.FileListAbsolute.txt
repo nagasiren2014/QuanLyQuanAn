@@ -5,7 +5,6 @@ D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.csprojResolveAssembly
 D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.addChiPhiPhatSinh.resources
 D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.chiNhanh.resources
 D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.doiMK.resources
-D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.showChiPhiPhatSinh.resources
 D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.DangNhap.resources
 D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.Properties.Resources.resources
 D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.QuanLy.resources

@@ -69,12 +69,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>menu.xsd</DependentUpon>
     </Compile>
-    <Compile Include="showChiPhiPhatSinhmonth.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="showChiPhiPhatSinhmonth.Designer.cs">
-      <DependentUpon>showChiPhiPhatSinhmonth.cs</DependentUpon>
-    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +95,7 @@
     <Compile Include="xemHoaDon.Designer.cs">
       <DependentUpon>xemHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="xulydulieu.cs" />
     <EmbeddedResource Include="addChiPhiPhatSinh.resx">
       <DependentUpon>addChiPhiPhatSinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,9 +104,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="doiMK.resx">
       <DependentUpon>doiMK.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="showChiPhiPhatSinhmonth.resx">
-      <DependentUpon>showChiPhiPhatSinhmonth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
