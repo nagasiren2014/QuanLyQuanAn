@@ -231,7 +231,7 @@ namespace QuanLyQuanAn
         public DataTable DocBangMonAn()
         {
             OleDbConnection oleConnection = new OleDbConnection();
-            oleConnection.ConnectionString = "Provider=SQLNCLI11;Data Source=VAIO;Integrated Security=SSPI;Initial Catalog=QLQA";
+            oleConnection.ConnectionString = bientoancuc.connectionString;
             OleDbCommand oleSelectCommand = new OleDbCommand();
             oleSelectCommand.Connection = oleConnection;
             oleSelectCommand.CommandText = "Select * From MonAn";

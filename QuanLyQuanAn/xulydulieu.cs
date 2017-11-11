@@ -10,12 +10,12 @@ namespace QuanLyQuanAn
 {
     class xulydulieu
     {
-        public static String connecionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QLQA;Data Source=VAIO";
+        //public static String connecionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QLQA;Data Source=VAIO";
 
         public static DataTable docBang(String sql)
         {
             DataTable dt = new DataTable();
-            OleDbDataAdapter adapter = new OleDbDataAdapter(sql, connecionString);
+            OleDbDataAdapter adapter = new OleDbDataAdapter(sql, bientoancuc.connectionString);
             adapter.Fill(dt);
             return dt;
         }
@@ -23,7 +23,7 @@ namespace QuanLyQuanAn
         public static void ghiBang(String tenBang, DataTable dt)
         {
             String selectSql = "Select * from " + tenBang;
-            OleDbDataAdapter adapter = new OleDbDataAdapter(selectSql, connecionString);
+            OleDbDataAdapter adapter = new OleDbDataAdapter(selectSql, bientoancuc.connectionString);
             OleDbCommandBuilder buider = new OleDbCommandBuilder(adapter);
             adapter.Update(dt);
         }
