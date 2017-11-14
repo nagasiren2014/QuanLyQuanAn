@@ -73,7 +73,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.label12 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnThemBan = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
@@ -82,14 +82,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
             this.flpBan = new System.Windows.Forms.FlowLayoutPanel();
-            this.dgvDSBAN = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.soBan)).BeginInit();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
-            this.flpBan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSBAN)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -535,15 +532,16 @@
             this.label12.TabIndex = 32;
             this.label12.Text = "SƠ ĐỒ BÀN ĂN";
             // 
-            // button7
+            // btnThemBan
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(12, 500);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(58, 36);
-            this.button7.TabIndex = 33;
-            this.button7.Text = "Thêm";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnThemBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemBan.Location = new System.Drawing.Point(12, 500);
+            this.btnThemBan.Name = "btnThemBan";
+            this.btnThemBan.Size = new System.Drawing.Size(58, 36);
+            this.btnThemBan.TabIndex = 33;
+            this.btnThemBan.Text = "Thêm";
+            this.btnThemBan.UseVisualStyleBackColor = true;
+            this.btnThemBan.Click += new System.EventHandler(this.btnThemBan_Click);
             // 
             // label14
             // 
@@ -620,19 +618,10 @@
             // 
             // flpBan
             // 
-            this.flpBan.Controls.Add(this.dgvDSBAN);
             this.flpBan.Location = new System.Drawing.Point(12, 73);
             this.flpBan.Name = "flpBan";
             this.flpBan.Size = new System.Drawing.Size(285, 421);
             this.flpBan.TabIndex = 40;
-            // 
-            // dgvDSBAN
-            // 
-            this.dgvDSBAN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSBAN.Location = new System.Drawing.Point(3, 3);
-            this.dgvDSBAN.Name = "dgvDSBAN";
-            this.dgvDSBAN.Size = new System.Drawing.Size(240, 150);
-            this.dgvDSBAN.TabIndex = 0;
             // 
             // chiNhanh
             // 
@@ -645,7 +634,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnThemBan);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button6);
@@ -673,8 +662,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
-            this.flpBan.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSBAN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -719,7 +706,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnThemBan;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_xoa;
@@ -735,6 +722,5 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.FlowLayoutPanel flpBan;
-        private System.Windows.Forms.DataGridView dgvDSBAN;
     }
 }

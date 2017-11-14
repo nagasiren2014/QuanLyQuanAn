@@ -14,3 +14,4 @@ D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.csproj.GenerateResour
 D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.exe
 D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.pdb
 D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.csproj.CoreCompileInputs.cache
+D:\GitHub\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.addBan.resources

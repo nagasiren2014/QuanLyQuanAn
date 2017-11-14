@@ -15,9 +15,9 @@ namespace QuanLyQuanAn
     public partial class chiNhanh : Form
     {
         int i = 0;//so dong cua hoa don 
-        int j = 1; 
-       
-      
+        int j = 1;
+        DataTable dsBan = new DataTable();
+
         public chiNhanh()
         {
             InitializeComponent();
@@ -220,16 +220,34 @@ namespace QuanLyQuanAn
         {
             bientoancuc.mn = DocBangMonAn();
             dgvMenu.DataSource = bientoancuc.mn;
-           
-
-            tbxMaNV.Text = bientoancuc.MaNV;
+                      tbxMaNV.Text = bientoancuc.MaNV;
             tbxMaCN.Text = bientoancuc.MaCN;
             tbxTenNV.Text = bientoancuc.TenNhanVien;
             bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);
-            DataTable dsBan = new DataTable();
+    
             dsBan = xulydulieu.docBang("Select * From Ban");
 
-            
+            for (int b = 0; b < dsBan.Rows.Count; b++)
+            {
+                if (dsBan.Rows[b]["MaChiNhanh"].ToString() == bientoancuc.MaCN)
+                {
+                    Button btn = new Button() { Width = 80, Height = 40 };
+                    btn.Text = dsBan.Rows[b]["TenBan"].ToString();
+                    if (dsBan.Rows[b]["TrangThai"].ToString() == "0")
+                        btn.Text = btn.Text + "\nTrống";
+                    else
+
+                    {
+                        btn.Text = btn.Text + "\nCó khách";
+                        btn.BackColor = Color.Red;
+                    }
+                    
+                        
+                    
+                   
+                    flpBan.Controls.Add(btn);
+                }
+            }
             
 
         }
@@ -286,6 +304,13 @@ namespace QuanLyQuanAn
         private void tạoTàiKhoảnMớiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnThemBan_Click(object sender, EventArgs e)
+        {
+            DataRow ban = dsBan.NewRow();
+            ban["MaBan"] = "B" + (dsBan.Rows.Count + 1).ToString();
+
         }
     }
    
