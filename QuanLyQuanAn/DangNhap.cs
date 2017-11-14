@@ -41,7 +41,7 @@ namespace QuanLyQuanAn
         public DataTable DocBangNV()
         {
             OleDbConnection oleConnection = new OleDbConnection();
-            oleConnection.ConnectionString = "Provider=SQLNCLI11;Data Source=VAIO;Integrated Security=SSPI;Initial Catalog=QLQA";
+            oleConnection.ConnectionString = bientoancuc.connectionString;
             OleDbCommand oleSelectCommand = new OleDbCommand();
             oleSelectCommand.Connection = oleConnection;
             oleSelectCommand.CommandText = "Select * From NhanVien";
@@ -73,7 +73,7 @@ namespace QuanLyQuanAn
                 if (tk.Text == s && mk.Text == bientoancuc.dsNhanVien.Rows[i]["MatKhau"].ToString())
                 {
 
-                    if (s[0] == 'C' && s[1] == 'N')
+                    if (s[0] == 'N' && s[1] == 'V')
 
                     {
                         

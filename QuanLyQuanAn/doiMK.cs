@@ -29,7 +29,7 @@ namespace QuanLyQuanAn
                 {
                     bientoancuc.dsNhanVien.Rows[bientoancuc.viTriTK]["MatKhau"] = tbxMKM.Text;
                     xulydulieu.ghiBang("NhanVien", bientoancuc.dsNhanVien);
-                    
+                    bientoancuc.MK = tbxMKM.Text;
                     this.Close();
 
                 }

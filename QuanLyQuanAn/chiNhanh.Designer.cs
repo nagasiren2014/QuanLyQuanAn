@@ -72,7 +72,6 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -82,11 +81,15 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
+            this.flpBan = new System.Windows.Forms.FlowLayoutPanel();
+            this.dgvDSBAN = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.soBan)).BeginInit();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
+            this.flpBan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSBAN)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -522,13 +525,6 @@
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 69);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(281, 425);
-            this.flowLayoutPanel1.TabIndex = 31;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -622,11 +618,28 @@
             this.dgvMenu.Size = new System.Drawing.Size(274, 424);
             this.dgvMenu.TabIndex = 39;
             // 
+            // flpBan
+            // 
+            this.flpBan.Controls.Add(this.dgvDSBAN);
+            this.flpBan.Location = new System.Drawing.Point(12, 73);
+            this.flpBan.Name = "flpBan";
+            this.flpBan.Size = new System.Drawing.Size(285, 421);
+            this.flpBan.TabIndex = 40;
+            // 
+            // dgvDSBAN
+            // 
+            this.dgvDSBAN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSBAN.Location = new System.Drawing.Point(3, 3);
+            this.dgvDSBAN.Name = "dgvDSBAN";
+            this.dgvDSBAN.Size = new System.Drawing.Size(240, 150);
+            this.dgvDSBAN.TabIndex = 0;
+            // 
             // chiNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.flpBan);
             this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.btn_bot);
             this.Controls.Add(this.button3);
@@ -634,7 +647,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
@@ -661,6 +673,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
+            this.flpBan.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSBAN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -704,7 +718,6 @@
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label14;
@@ -721,5 +734,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.FlowLayoutPanel flpBan;
+        private System.Windows.Forms.DataGridView dgvDSBAN;
     }
 }

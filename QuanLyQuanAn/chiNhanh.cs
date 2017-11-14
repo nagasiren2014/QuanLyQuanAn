@@ -14,8 +14,8 @@ namespace QuanLyQuanAn
 {
     public partial class chiNhanh : Form
     {
-        int i = 0;
-        int j = 1;
+        int i = 0;//so dong cua hoa don 
+        int j = 1; 
        
       
         public chiNhanh()
@@ -226,6 +226,12 @@ namespace QuanLyQuanAn
             tbxMaCN.Text = bientoancuc.MaCN;
             tbxTenNV.Text = bientoancuc.TenNhanVien;
             bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);
+            DataTable dsBan = new DataTable();
+            dsBan = xulydulieu.docBang("Select * From Ban");
+
+            
+            
+
         }
 
         public DataTable DocBangMonAn()
