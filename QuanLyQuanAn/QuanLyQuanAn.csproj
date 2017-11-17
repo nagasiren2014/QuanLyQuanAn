@@ -45,12 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addBan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="addBan.Designer.cs">
-      <DependentUpon>addBan.cs</DependentUpon>
-    </Compile>
     <Compile Include="addChiPhiPhatSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,9 +96,6 @@
       <DependentUpon>xemHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="xulydulieu.cs" />
-    <EmbeddedResource Include="addBan.resx">
-      <DependentUpon>addBan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="addChiPhiPhatSinh.resx">
       <DependentUpon>addChiPhiPhatSinh.cs</DependentUpon>
     </EmbeddedResource>

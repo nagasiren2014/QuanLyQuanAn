@@ -81,7 +81,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
-            this.flpBan = new System.Windows.Forms.FlowLayoutPanel();
+            this.listView_DSBAN = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.soBan)).BeginInit();
             this.panel2.SuspendLayout();
@@ -521,21 +524,22 @@
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(71, 42);
+            this.label12.Location = new System.Drawing.Point(72, 43);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 24);
+            this.label12.Size = new System.Drawing.Size(165, 24);
             this.label12.TabIndex = 32;
-            this.label12.Text = "SƠ ĐỒ BÀN ĂN";
+            this.label12.Text = "DANH SÁCH BÀN";
             // 
             // btnThemBan
             // 
             this.btnThemBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemBan.Location = new System.Drawing.Point(12, 500);
+            this.btnThemBan.Location = new System.Drawing.Point(12, 467);
             this.btnThemBan.Name = "btnThemBan";
             this.btnThemBan.Size = new System.Drawing.Size(58, 36);
             this.btnThemBan.TabIndex = 33;
@@ -547,7 +551,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(36, 575);
+            this.label14.Location = new System.Drawing.Point(36, 542);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(181, 24);
             this.label14.TabIndex = 34;
@@ -556,7 +560,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(89, 605);
+            this.button3.Location = new System.Drawing.Point(89, 572);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 39);
             this.button3.TabIndex = 36;
@@ -600,12 +604,13 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(76, 500);
+            this.button1.Location = new System.Drawing.Point(76, 467);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(58, 36);
             this.button1.TabIndex = 33;
             this.button1.Text = "Xoá";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvMenu
             // 
@@ -615,20 +620,44 @@
             this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMenu.Size = new System.Drawing.Size(274, 424);
             this.dgvMenu.TabIndex = 39;
+            this.dgvMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_CellContentClick);
             // 
-            // flpBan
+            // listView_DSBAN
             // 
-            this.flpBan.Location = new System.Drawing.Point(12, 73);
-            this.flpBan.Name = "flpBan";
-            this.flpBan.Size = new System.Drawing.Size(285, 421);
-            this.flpBan.TabIndex = 40;
+            this.listView_DSBAN.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView_DSBAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_DSBAN.GridLines = true;
+            this.listView_DSBAN.Location = new System.Drawing.Point(12, 76);
+            this.listView_DSBAN.Name = "listView_DSBAN";
+            this.listView_DSBAN.Size = new System.Drawing.Size(275, 385);
+            this.listView_DSBAN.TabIndex = 40;
+            this.listView_DSBAN.UseCompatibleStateImageBehavior = false;
+            this.listView_DSBAN.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Bàn";
+            this.columnHeader1.Width = 62;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Trạng thái";
+            this.columnHeader2.Width = 88;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Tổng hoá đơn";
+            this.columnHeader3.Width = 119;
             // 
             // chiNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.flpBan);
+            this.Controls.Add(this.listView_DSBAN);
             this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.btn_bot);
             this.Controls.Add(this.button3);
@@ -721,6 +750,9 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.FlowLayoutPanel flpBan;
+        private System.Windows.Forms.ListView listView_DSBAN;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
