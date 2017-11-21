@@ -18,10 +18,6 @@ namespace QuanLyQuanAn
             
         }
 
-        
-
-     
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát không ? ", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.Cancel)
@@ -29,9 +25,7 @@ namespace QuanLyQuanAn
             System.Windows.Forms.Application.Exit();
              
                 
-        }
-
-        
+        }       
         private void DangNhap_Load(object sender, EventArgs e)
         {
             bientoancuc.dsNhanVien = DocBangNV();

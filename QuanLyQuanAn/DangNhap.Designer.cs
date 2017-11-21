@@ -38,16 +38,17 @@
             // tk
             // 
             this.tk.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tk.Location = new System.Drawing.Point(285, 156);
+            this.tk.Location = new System.Drawing.Point(285, 168);
             this.tk.Name = "tk";
             this.tk.Size = new System.Drawing.Size(190, 25);
             this.tk.TabIndex = 0;
+            this.tk.Text = "Nhập Tên Tài Khoản";
             this.tk.Click += new System.EventHandler(this.tk_Click);
             // 
             // mk
             // 
             this.mk.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mk.Location = new System.Drawing.Point(285, 187);
+            this.mk.Location = new System.Drawing.Point(285, 201);
             this.mk.Name = "mk";
             this.mk.Size = new System.Drawing.Size(190, 25);
             this.mk.TabIndex = 3;
@@ -55,10 +56,10 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(285, 231);
+            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(285, 249);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 33);
+            this.button2.Size = new System.Drawing.Size(92, 36);
             this.button2.TabIndex = 4;
             this.button2.Text = "Đăng nhập";
             this.button2.UseVisualStyleBackColor = true;
@@ -66,10 +67,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(383, 231);
+            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(383, 249);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 33);
+            this.button1.Size = new System.Drawing.Size(92, 36);
             this.button1.TabIndex = 5;
             this.button1.Text = "Thoát";
             this.button1.UseVisualStyleBackColor = true;
@@ -77,11 +78,11 @@
             // 
             // DangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(707, 449);
+            this.ClientSize = new System.Drawing.Size(707, 484);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.mk);

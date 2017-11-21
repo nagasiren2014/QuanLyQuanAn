@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace QuanLyQuanAn
 {
@@ -34,5 +35,28 @@ namespace QuanLyQuanAn
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void tongDai_Load(object sender, EventArgs e)
+        {
+            bientoancuc.BangChiNhanh = DocBangChiNhanh();
+            DanhSachChiNhanh_Dgv.DataSource = bientoancuc.BangChiNhanh;
+        }
+
+
+        public DataTable DocBangChiNhanh()
+        {
+            OleDbConnection oleConnection = new OleDbConnection();
+            oleConnection.ConnectionString = bientoancuc.connectionString;
+            OleDbCommand oleSelectCommand = new OleDbCommand();
+            oleSelectCommand.Connection = oleConnection;
+            oleSelectCommand.CommandText = "Select * From ChiNhanh";
+            OleDbDataAdapter oleDataAdapter = new OleDbDataAdapter();
+            oleDataAdapter.SelectCommand = oleSelectCommand;
+            DataTable dt = new DataTable();
+            oleDataAdapter.Fill(dt);
+            return dt;
+        }
+
+
     }
 }
