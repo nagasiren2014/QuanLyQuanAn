@@ -15,9 +15,10 @@ namespace QuanLyQuanAn
     public partial class chiNhanh : Form
     {
         int i = 0;//so dong cua hoa don 
-        int j = 1; 
-       
-      
+        int j = 1;//số lượng của mỗi món
+
+        DataTable dsBan = new DataTable();
+
         public chiNhanh()
         {
             InitializeComponent();
@@ -218,37 +219,30 @@ namespace QuanLyQuanAn
 
         private void chiNhanh_Load(object sender, EventArgs e)
         {
-            bientoancuc.mn = DocBangMonAn();
+            bientoancuc.mn = xulydulieu.docBang("Select * From MonAn");
             dgvMenu.DataSource = bientoancuc.mn;
-           
-
             tbxMaNV.Text = bientoancuc.MaNV;
             tbxMaCN.Text = bientoancuc.MaCN;
             tbxTenNV.Text = bientoancuc.TenNhanVien;
             bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);
-            DataTable dsBan = new DataTable();
+    
             dsBan = xulydulieu.docBang("Select * From Ban");
-
-            
+            int stt = 0;//số thứ tự bàn trong chi nhánh
+            int tt = 0; //Trạng thái
+            for (int b = 0; b < dsBan.Rows.Count; b++)
+            {
+                if (dsBan.Rows[b]["MaChiNhanh"].ToString() == bientoancuc.MaCN)
+                {
+                    listView_DSBAN.Items.Add(stt.ToString());
+                    
+                    listView_DSBAN.Items[stt].SubItems.Add(tt.ToString());
+                }
+            }
             
 
         }
 
-        public DataTable DocBangMonAn()
-        {
-            OleDbConnection oleConnection = new OleDbConnection();
-            oleConnection.ConnectionString = bientoancuc.connectionString;
-            OleDbCommand oleSelectCommand = new OleDbCommand();
-            oleSelectCommand.Connection = oleConnection;
-            oleSelectCommand.CommandText = "Select * From MonAn";
-            OleDbDataAdapter oleDataAdapter = new OleDbDataAdapter();
-            oleDataAdapter.SelectCommand = oleSelectCommand;
-
-            DataTable dt = new DataTable();
-            oleDataAdapter.Fill(dt);
-            return dt;
-
-        }
+        
 
         private void tbxPhiDichVu_TextChanged(object sender, EventArgs e)
         {
@@ -286,6 +280,30 @@ namespace QuanLyQuanAn
         private void tạoTàiKhoảnMớiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnThemBan_Click(object sender, EventArgs e)
+        {
+            
+
+
+
+        }
+
+        private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
    

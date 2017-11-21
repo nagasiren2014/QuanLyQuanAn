@@ -73,7 +73,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.label12 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnThemBan = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
@@ -81,15 +81,15 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
-            this.flpBan = new System.Windows.Forms.FlowLayoutPanel();
-            this.dgvDSBAN = new System.Windows.Forms.DataGridView();
+            this.listView_DSBAN = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.soBan)).BeginInit();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
-            this.flpBan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSBAN)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -524,32 +524,34 @@
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(71, 42);
+            this.label12.Location = new System.Drawing.Point(72, 43);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 24);
+            this.label12.Size = new System.Drawing.Size(165, 24);
             this.label12.TabIndex = 32;
-            this.label12.Text = "SƠ ĐỒ BÀN ĂN";
+            this.label12.Text = "DANH SÁCH BÀN";
             // 
-            // button7
+            // btnThemBan
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(12, 500);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(58, 36);
-            this.button7.TabIndex = 33;
-            this.button7.Text = "Thêm";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnThemBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemBan.Location = new System.Drawing.Point(12, 467);
+            this.btnThemBan.Name = "btnThemBan";
+            this.btnThemBan.Size = new System.Drawing.Size(58, 36);
+            this.btnThemBan.TabIndex = 33;
+            this.btnThemBan.Text = "Thêm";
+            this.btnThemBan.UseVisualStyleBackColor = true;
+            this.btnThemBan.Click += new System.EventHandler(this.btnThemBan_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(36, 575);
+            this.label14.Location = new System.Drawing.Point(36, 542);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(181, 24);
             this.label14.TabIndex = 34;
@@ -558,7 +560,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(89, 605);
+            this.button3.Location = new System.Drawing.Point(89, 572);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 39);
             this.button3.TabIndex = 36;
@@ -602,12 +604,13 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(76, 500);
+            this.button1.Location = new System.Drawing.Point(76, 467);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(58, 36);
             this.button1.TabIndex = 33;
             this.button1.Text = "Xoá";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvMenu
             // 
@@ -617,35 +620,50 @@
             this.dgvMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMenu.Size = new System.Drawing.Size(274, 424);
             this.dgvMenu.TabIndex = 39;
+            this.dgvMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_CellContentClick);
             // 
-            // flpBan
+            // listView_DSBAN
             // 
-            this.flpBan.Controls.Add(this.dgvDSBAN);
-            this.flpBan.Location = new System.Drawing.Point(12, 73);
-            this.flpBan.Name = "flpBan";
-            this.flpBan.Size = new System.Drawing.Size(285, 421);
-            this.flpBan.TabIndex = 40;
+            this.listView_DSBAN.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView_DSBAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_DSBAN.GridLines = true;
+            this.listView_DSBAN.Location = new System.Drawing.Point(12, 76);
+            this.listView_DSBAN.Name = "listView_DSBAN";
+            this.listView_DSBAN.Size = new System.Drawing.Size(275, 385);
+            this.listView_DSBAN.TabIndex = 40;
+            this.listView_DSBAN.UseCompatibleStateImageBehavior = false;
+            this.listView_DSBAN.View = System.Windows.Forms.View.Details;
             // 
-            // dgvDSBAN
+            // columnHeader1
             // 
-            this.dgvDSBAN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSBAN.Location = new System.Drawing.Point(3, 3);
-            this.dgvDSBAN.Name = "dgvDSBAN";
-            this.dgvDSBAN.Size = new System.Drawing.Size(240, 150);
-            this.dgvDSBAN.TabIndex = 0;
+            this.columnHeader1.Text = "Bàn";
+            this.columnHeader1.Width = 62;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Trạng thái";
+            this.columnHeader2.Width = 88;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Tổng hoá đơn";
+            this.columnHeader3.Width = 119;
             // 
             // chiNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.flpBan);
+            this.Controls.Add(this.listView_DSBAN);
             this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.btn_bot);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnThemBan);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button6);
@@ -673,8 +691,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
-            this.flpBan.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSBAN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -719,7 +735,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnThemBan;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_xoa;
@@ -734,7 +750,9 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.FlowLayoutPanel flpBan;
-        private System.Windows.Forms.DataGridView dgvDSBAN;
+        private System.Windows.Forms.ListView listView_DSBAN;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
