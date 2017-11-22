@@ -78,7 +78,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_bot = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_xuongBep = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
             this.listView_DSBAN = new System.Windows.Forms.ListView();
@@ -590,16 +590,16 @@
             this.btn_bot.UseVisualStyleBackColor = true;
             this.btn_bot.Click += new System.EventHandler(this.btn_bot_Click);
             // 
-            // button4
+            // btn_xuongBep
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(631, 395);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 66);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Chuyển xuống bếp";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btn_xuongBep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xuongBep.Location = new System.Drawing.Point(631, 395);
+            this.btn_xuongBep.Name = "btn_xuongBep";
+            this.btn_xuongBep.Size = new System.Drawing.Size(75, 66);
+            this.btn_xuongBep.TabIndex = 15;
+            this.btn_xuongBep.Text = "Chuyển xuống bếp";
+            this.btn_xuongBep.UseVisualStyleBackColor = true;
+            this.btn_xuongBep.Click += new System.EventHandler(this.btn_xuongBep_Click);
             // 
             // button1
             // 
@@ -629,6 +629,7 @@
             this.columnHeader2,
             this.columnHeader3});
             this.listView_DSBAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_DSBAN.FullRowSelect = true;
             this.listView_DSBAN.GridLines = true;
             this.listView_DSBAN.Location = new System.Drawing.Point(12, 76);
             this.listView_DSBAN.Name = "listView_DSBAN";
@@ -650,6 +651,7 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Tổng hoá đơn";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader3.Width = 119;
             // 
             // chiNhanh
@@ -667,7 +669,7 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btn_xuongBep);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_them);
@@ -740,7 +742,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_bot;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_xuongBep;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvMenu;
         private System.Windows.Forms.Label label15;

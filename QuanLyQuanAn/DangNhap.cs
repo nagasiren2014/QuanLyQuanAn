@@ -18,6 +18,8 @@ namespace QuanLyQuanAn
             
         }
 
+        DataTable dsTaiKhoan = new DataTable();
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát không ? ", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.Cancel)
@@ -29,6 +31,7 @@ namespace QuanLyQuanAn
         private void DangNhap_Load(object sender, EventArgs e)
         {
             bientoancuc.dsNhanVien = DocBangNV();
+            dsTaiKhoan = xulydulieu.docBang("Select * from DangNhap");
 
         }
 
@@ -64,7 +67,7 @@ namespace QuanLyQuanAn
             for (int i = 0; i < bientoancuc.dsNhanVien.Rows.Count; i++)
             {
                 string s = bientoancuc.dsNhanVien.Rows[i]["MaNhanVien"].ToString();
-                if (tk.Text == s && mk.Text == bientoancuc.dsNhanVien.Rows[i]["MatKhau"].ToString())
+                if (tk.Text == s && mk.Text == dsTaiKhoan.Rows[i]["MatKhau"].ToString())
                 {
 
                     if (s[0] == 'N' && s[1] == 'V')
@@ -109,7 +112,12 @@ namespace QuanLyQuanAn
 
         private void tk_Click(object sender, EventArgs e)
         {
-            tk.Text = "";
+           
+        }
+
+        private void tk_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     

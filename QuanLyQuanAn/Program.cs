@@ -16,8 +16,9 @@ namespace QuanLyQuanAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new DangNhap());
-            Application.Run(new tongDai());
+            Application.Run(new DangNhap());
+            //Application.Run(new tongDai());
+           // Application.Run(new chiNhanh());
         }
     }
 }
