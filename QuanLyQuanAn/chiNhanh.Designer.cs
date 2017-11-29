@@ -322,7 +322,6 @@
             this.label6.Size = new System.Drawing.Size(151, 25);
             this.label6.TabIndex = 18;
             this.label6.Text = "KHÁCH HÀNG";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBox5
             // 
@@ -499,7 +498,6 @@
             this.tạoTàiKhoảnMớiToolStripMenuItem.Name = "tạoTàiKhoảnMớiToolStripMenuItem";
             this.tạoTàiKhoảnMớiToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.tạoTàiKhoảnMớiToolStripMenuItem.Text = "Tạo tài khoản mới";
-            this.tạoTàiKhoảnMớiToolStripMenuItem.Click += new System.EventHandler(this.tạoTàiKhoảnMớiToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
@@ -524,7 +522,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // label12
             // 
@@ -560,7 +557,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(89, 572);
+            this.button3.Location = new System.Drawing.Point(89, 573);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 39);
             this.button3.TabIndex = 36;
@@ -628,31 +625,30 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView_DSBAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_DSBAN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_DSBAN.FullRowSelect = true;
             this.listView_DSBAN.GridLines = true;
             this.listView_DSBAN.Location = new System.Drawing.Point(12, 76);
             this.listView_DSBAN.Name = "listView_DSBAN";
-            this.listView_DSBAN.Size = new System.Drawing.Size(275, 385);
+            this.listView_DSBAN.Size = new System.Drawing.Size(277, 385);
             this.listView_DSBAN.TabIndex = 40;
             this.listView_DSBAN.UseCompatibleStateImageBehavior = false;
             this.listView_DSBAN.View = System.Windows.Forms.View.Details;
+            this.listView_DSBAN.SelectedIndexChanged += new System.EventHandler(this.listView_DSBAN_SelectedIndexChanged_1);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Bàn";
-            this.columnHeader1.Width = 62;
+            this.columnHeader1.Text = "Mã Bàn";
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Trạng thái";
-            this.columnHeader2.Width = 88;
+            this.columnHeader2.Width = 83;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Tổng hoá đơn";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader3.Width = 119;
+            this.columnHeader3.Text = "Tổng tiền";
+            this.columnHeader3.Width = 128;
             // 
             // chiNhanh
             // 
@@ -684,7 +680,6 @@
             this.Text = "chiNhanh";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.chiNhanh_FormClosing);
             this.Load += new System.EventHandler(this.chiNhanh_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.chiNhanh_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.soBan)).EndInit();

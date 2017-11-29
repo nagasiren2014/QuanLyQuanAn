@@ -67,7 +67,8 @@ namespace QuanLyQuanAn
             for (int i = 0; i < bientoancuc.dsNhanVien.Rows.Count; i++)
             {
                 string s = bientoancuc.dsNhanVien.Rows[i]["MaNhanVien"].ToString();
-                if (tk.Text == s && mk.Text == dsTaiKhoan.Rows[i]["MatKhau"].ToString())
+                string k = dsTaiKhoan.Rows[i]["MatKhau"].ToString();
+                if (tk.Text == s && mk.Text == k)
                 {
 
                     if (s[0] == 'N' && s[1] == 'V')
@@ -85,6 +86,7 @@ namespace QuanLyQuanAn
                     else
                         if (s[0] == 'Q' && s[1] == 'L')
                     {
+
                         this.Hide();
                         ql.Show();
                     }
@@ -96,7 +98,7 @@ namespace QuanLyQuanAn
                     }
                     break;
                 }
-                if (i == bientoancuc.dsNhanVien.Rows.Count - 1)
+                if (i == bientoancuc.dsNhanVien.Rows.Count-1)
                     MessageBox.Show("Sai tài khoản hoặc mật khẩu !", "Thông báo", MessageBoxButtons.OK);
             }
 

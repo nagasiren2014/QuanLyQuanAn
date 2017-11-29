@@ -21,14 +21,14 @@ namespace QuanLyQuanAn
         {
             if (addCBX.Text == "ngày")
             {
-                addDays.Enabled = true;
+                
                 panelThang.Enabled = false;
                 soTientbx.Enabled = true;
 
             }
             else
             {
-                addDays.Enabled = false;
+                
                 panelThang.Enabled = true;
                 soTientbx.Enabled = false;
 

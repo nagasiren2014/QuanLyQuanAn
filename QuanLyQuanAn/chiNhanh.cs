@@ -16,16 +16,38 @@ namespace QuanLyQuanAn
     {
         int i = 0;//so dong cua hoa don 
         int j = 1;//số lượng của mỗi món
-
+        int ban;//so ban trong listview
+        int dt_ban ;//mã bàn max
         DataTable dsBan = new DataTable();
         DataTable ban_cost = new DataTable();
+        DataTable dsBanFull = new DataTable();
         public chiNhanh()
         {
             InitializeComponent();
         }
 
 
-
+        public int docMaBanMax(DataTable x)
+        {
+            int kq = 0;
+            int max = 0;
+            for (int i = 0; i < x.Rows.Count; i++)
+            {
+                string s = x.Rows[i]["MaBan"].ToString();
+                int k = 1;
+                while (k < s.Length)
+                {
+                    kq = kq * 10 + int.Parse(s[k].ToString());
+                    k++;
+                }
+                if (kq > max)
+                {
+                    max = kq;
+                }
+                kq = 0;
+            }
+            return max;
+        }
 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -216,45 +238,59 @@ namespace QuanLyQuanAn
 
         private void chiNhanh_Load(object sender, EventArgs e)
         {
+
+
             bientoancuc.mn = xulydulieu.docBang("Select * From MonAn");
             dgvMenu.DataSource = bientoancuc.mn;
+
+
+
             tbxMaNV.Text = bientoancuc.MaNV;
             tbxMaCN.Text = bientoancuc.MaCN;
             tbxTenNV.Text = bientoancuc.TenNhanVien;
             bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);///////////////Load !
-            dsBan = xulydulieu.docBang("Select * From Ban");
+            dsBan = xulydulieu.docBang("Select * From Ban WHERE MaChiNhanh LIKE '%" + bientoancuc.MaCN + "%'");
             ban_cost = xulydulieu.docBang("Select * from TongTien");
             
             
-            int tt = 0; //Trạng thái
-            int i = 0; // so dong cua listview
+           
+
+            //for(int i = 0; i < dsBan.Rows.Count; i++)
+            //{
+            //    Button b = new Button() {Width = 60, Height = 50};
+            //    b.Text = dsBan.Rows[i]["MaBan"].ToString();
+            //    flDSBan.Controls.Add(b);
+            //}
+
+             ban = 0; // so dong cua listview
             for (int b = 0; b < dsBan.Rows.Count; b++)//doc ds ban
             {
                 if (dsBan.Rows[b]["MaChiNhanh"].ToString() == bientoancuc.MaCN)
                 {
                     listView_DSBAN.Items.Add(dsBan.Rows[b]["MaBan"].ToString());
-                   
-                    listView_DSBAN.Items[i].SubItems.Add(tt.ToString());//trang thai
+
+                    listView_DSBAN.Items[ban].SubItems.Add(dsBan.Rows[b]["TrangThai"].ToString());
                     for (int j = 0; j < ban_cost.Rows.Count; j++)
                     {
                         if (ban_cost.Rows[j]["MaBan"].ToString() == dsBan.Rows[b]["MaBan"].ToString())
                         {
-                            listView_DSBAN.Items[i].SubItems.Add(ban_cost.Rows[j]["TongTien"].ToString());
+                            listView_DSBAN.Items[ban].SubItems.Add(ban_cost.Rows[j]["TongTien"].ToString());
                             break;
                         }
                     }
-                    if(j <= ban_cost.Rows.Count )
-                        
-                        listView_DSBAN.Items[i].SubItems.Add("0");
+                    if (j == 1)
+
+                        listView_DSBAN.Items[ban].SubItems.Add("0");
 
 
-                    i++;
+                    ban++;
 
-                    
-                    
+
+
                 }
             }
-            
+
+
 
         }
 
@@ -283,41 +319,7 @@ namespace QuanLyQuanAn
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chiNhanh_KeyDown(object sender, KeyEventArgs e)
-        {
-           
-        }
-
-        private void tạoTàiKhoảnMớiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnThemBan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-
-        }
+    
 
         private void btn_xuongBep_Click(object sender, EventArgs e)
         {
@@ -341,6 +343,25 @@ namespace QuanLyQuanAn
                         {
 
                         }
+                        else
+                        {
+                            listView_DSBAN.SelectedItems[0].SubItems[2].Text = tbxTongCong.Text;
+                            for (int i = 0; i < ban_cost.Rows.Count; i++)
+                            {
+                                if (ban_cost.Rows[i]["MaBan"].ToString() == listView_DSBAN.SelectedItems[0].Text)
+                                {
+
+                                    ban_cost.Rows[i]["TongTien"] = tbxTongCong.Text;
+                                    xulydulieu.ghiBang("TongTien", ban_cost);
+                                    break;
+                                }
+                            }
+
+
+                        }
+                    }
+                    else
+                    {
                         listView_DSBAN.SelectedItems[0].SubItems[2].Text = tbxTongCong.Text;
                         DataRow cost = ban_cost.NewRow();
                         cost["MaBan"] = listView_DSBAN.SelectedItems[0].Text;
@@ -351,6 +372,82 @@ namespace QuanLyQuanAn
                 }
             }
         }
+
+        private void listView_DSBAN_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThemBan_Click(object sender, EventArgs e)
+        {
+
+
+             dsBanFull = xulydulieu.docBang("Select * From Ban");
+
+            DataRow ban_new = dsBanFull.NewRow();
+
+            dt_ban = docMaBanMax(dsBanFull);
+
+            ban_new["MaBan"] = "B" + (dt_ban + 1).ToString();
+            ban_new["MaChiNhanh"] = bientoancuc.MaCN;
+            ban_new["TenBan"] = "Ban " + (dsBanFull.Rows.Count + 1).ToString();
+            ban_new["TrangThai"] = "0";
+
+            listView_DSBAN.Items.Add(ban_new["MaBan"].ToString());
+            listView_DSBAN.Items[ban].SubItems.Add("0");
+            listView_DSBAN.Items[ban].SubItems.Add("0");
+
+
+            dsBanFull.Rows.Add(ban_new);
+
+            xulydulieu.ghiBang("Ban",dsBanFull);
+            
+            ban++;
+            dt_ban++;
+        }
+
+        private void listView_DSBAN_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dsBanFull = xulydulieu.docBang("Select * From Ban");
+            if (listView_DSBAN.SelectedItems[0].SubItems[2].Text != "0")
+                {
+                    MessageBox.Show("Bàn " + listView_DSBAN.SelectedItems[0].Text + " chưa thanh toán, không thể xoá !");
+                }
+                else
+                {
+                    while (listView_DSBAN.SelectedItems.Count > 0)
+                    {
+
+                        for (int i = 0; i < dsBanFull.Rows.Count; i++)
+                        {
+                            if (dsBanFull.Rows[i]["MaBan"].ToString() == listView_DSBAN.SelectedItems[0].Text)
+                            {
+                                dsBanFull.Rows[i].Delete();
+                                break;
+                            }
+                        }
+
+                        xulydulieu.ghiBang("Ban", dsBanFull);
+                        listView_DSBAN.SelectedItems[0].Remove();
+                        ban--;
+                     }
+                
+            }
+                
+            
+        }
+
+        
     }
    
 }
