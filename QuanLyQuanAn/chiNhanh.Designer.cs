@@ -85,6 +85,8 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lb_mdh = new System.Windows.Forms.Label();
+            this.lb_maDH = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.soBan)).BeginInit();
             this.panel2.SuspendLayout();
@@ -220,6 +222,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lb_maDH);
+            this.panel1.Controls.Add(this.lb_mdh);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.soBan);
             this.panel1.Controls.Add(this.label11);
@@ -650,6 +654,23 @@
             this.columnHeader3.Text = "Tổng tiền";
             this.columnHeader3.Width = 128;
             // 
+            // lb_mdh
+            // 
+            this.lb_mdh.AutoSize = true;
+            this.lb_mdh.Location = new System.Drawing.Point(9, 30);
+            this.lb_mdh.Name = "lb_mdh";
+            this.lb_mdh.Size = new System.Drawing.Size(77, 13);
+            this.lb_mdh.TabIndex = 19;
+            this.lb_mdh.Text = "Mã đơn hàng: ";
+            // 
+            // lb_maDH
+            // 
+            this.lb_maDH.AutoSize = true;
+            this.lb_maDH.Location = new System.Drawing.Point(78, 30);
+            this.lb_maDH.Name = "lb_maDH";
+            this.lb_maDH.Size = new System.Drawing.Size(0, 13);
+            this.lb_maDH.TabIndex = 19;
+            // 
             // chiNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -751,5 +772,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Label lb_mdh;
+        private System.Windows.Forms.Label lb_maDH;
     }
 }

@@ -15,8 +15,16 @@ namespace QuanLyQuanAn
         public static DataTable BangChiNhanh;
        // public static DataTable BangMonAn;
         public static DataTable mn;
+        public static DataTable dsTaiKhoan;
         public static int viTriTK;
+        public static int xacNhan = 0;
         public static string connectionString = "Provider=SQLNCLI11;Data Source=VAIO;Integrated Security=SSPI;Initial Catalog=QuanLyQuanAn_Data";
-    }
+
+       public static  List<Items> mon = new List<Items>();
+        
+           
+
+
+}
 
 }

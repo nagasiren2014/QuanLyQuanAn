@@ -27,8 +27,8 @@ namespace QuanLyQuanAn
                 }
                 else
                 {
-                    bientoancuc.dsNhanVien.Rows[bientoancuc.viTriTK]["MatKhau"] = tbxMKM.Text;
-                    xulydulieu.ghiBang("NhanVien", bientoancuc.dsNhanVien);
+                    bientoancuc.dsTaiKhoan.Rows[bientoancuc.viTriTK]["MatKhau"] = tbxMKM.Text;
+                    xulydulieu.ghiBang("DangNhap", bientoancuc.dsTaiKhoan);
                     bientoancuc.MK = tbxMKM.Text;
                     this.Close();
 

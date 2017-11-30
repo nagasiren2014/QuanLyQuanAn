@@ -18,7 +18,7 @@ namespace QuanLyQuanAn
             
         }
 
-        DataTable dsTaiKhoan = new DataTable();
+       
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -31,7 +31,7 @@ namespace QuanLyQuanAn
         private void DangNhap_Load(object sender, EventArgs e)
         {
             bientoancuc.dsNhanVien = DocBangNV();
-            dsTaiKhoan = xulydulieu.docBang("Select * from DangNhap");
+            bientoancuc.dsTaiKhoan = xulydulieu.docBang("Select * from DangNhap");
 
         }
 
@@ -67,7 +67,7 @@ namespace QuanLyQuanAn
             for (int i = 0; i < bientoancuc.dsNhanVien.Rows.Count; i++)
             {
                 string s = bientoancuc.dsNhanVien.Rows[i]["MaNhanVien"].ToString();
-                string k = dsTaiKhoan.Rows[i]["MatKhau"].ToString();
+                string k = bientoancuc.dsTaiKhoan.Rows[i]["MatKhau"].ToString();
                 if (tk.Text == s && mk.Text == k)
                 {
 

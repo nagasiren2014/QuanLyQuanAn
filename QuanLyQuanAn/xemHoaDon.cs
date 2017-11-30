@@ -17,6 +17,29 @@ namespace QuanLyQuanAn
             InitializeComponent();
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bientoancuc.xacNhan = 1;
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            bientoancuc.xacNhan = 0;
+            this.Close();
+        }
+
+        private void xemHoaDon_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < bientoancuc.mon.Count; i++)
+            {
+                hoaDonin.Items.Add(bientoancuc.mon[i].xuatTen());
+                hoaDonin.Items[i].SubItems.Add(bientoancuc.mon[i].xuatSL());
+                hoaDonin.Items[i].SubItems.Add(bientoancuc.mon[i].xuatDVT());
+                hoaDonin.Items[i].SubItems.Add(bientoancuc.mon[i].xuatGia());
+
+
+            }
+        }
     }
 }
