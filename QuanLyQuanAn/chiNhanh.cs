@@ -273,7 +273,7 @@ namespace QuanLyQuanAn
 
            
 
-             ban = 0; // so dong cua listview
+            ban = 0; // so dong cua listview
             for (int b = 0; b < dsBan.Rows.Count; b++)//doc ds ban
             {
                 if (dsBan.Rows[b]["MaChiNhanh"].ToString() == bientoancuc.MaCN)
@@ -304,8 +304,6 @@ namespace QuanLyQuanAn
 
 
         }
-
-        
 
         private void tbxPhiDichVu_TextChanged(object sender, EventArgs e)
         {
