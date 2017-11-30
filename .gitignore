@@ -11,3 +11,8 @@ QuanLyQuanAn/obj/Debug/QuanLyQuanAn.csproj.CoreCompileInputs.cache
 *.ide
 .vs/QuanLyQuanAn/v15/.suo
 *.sqlite
+*.sqlite
+*.ide-shm
+*.ide-wal
+*.ide
+*.sqlite
