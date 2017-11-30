@@ -13,10 +13,11 @@ namespace QuanLyQuanAn
         //public static DataTable dsChiNhanh;
         public static string  MaNV, TenNhanVien, MaCN,MK;
         public static DataTable BangChiNhanh;
-       // public static DataTable BangMonAn;
+        public static DataTable BangMonAn;
+        public static DataTable BangLichSuKhachHang;
         public static DataTable mn;
         public static int viTriTK;
-        public static string connectionString = "Provider=SQLNCLI11;Data Source=VAIO;Integrated Security=SSPI;Initial Catalog=QuanLyQuanAn_Data";
+        public static string connectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QuanLyQuanAn_Data;Data Source=DESKTOP-QR067OS";
     }
 
 }
