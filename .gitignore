@@ -6,3 +6,8 @@
 QuanLyQuanAn/obj/Debug/QuanLyQuanAn.exe
 QuanLyQuanAn/obj/Debug/QuanLyQuanAn.pdb
 QuanLyQuanAn/obj/Debug/QuanLyQuanAn.csproj.CoreCompileInputs.cache
+*.pdb
+*.Cache
+*.ide
+.vs/QuanLyQuanAn/v15/.suo
+*.sqlite
