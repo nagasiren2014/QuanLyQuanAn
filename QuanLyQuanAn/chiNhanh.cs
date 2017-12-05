@@ -135,7 +135,7 @@ namespace QuanLyQuanAn
             
         }
 
-        public void tongTien()
+        public int tongTien()
         {
             int tc = 0;
             for (int u = 0; u < i; u++)
@@ -146,7 +146,8 @@ namespace QuanLyQuanAn
             if (tc == 0)
                 tbxTongCong.Text = "0";
             tc = (int.Parse(tbxTongCong.Text) + int.Parse(tbxPhiDichVu.Text));
-            tbxTongCong.Text = (tc - tc * int.Parse(tbxGiamGia.Text) / 100).ToString();
+            tc = tc - tc * int.Parse(tbxGiamGia.Text) / 100;
+            return tc;
         }
 
 
@@ -176,7 +177,7 @@ namespace QuanLyQuanAn
                 {
                     AddItem();
                 }
-                tongTien();
+                tbxTongCong.Text =  Convert.ToString(tongTien());
             }
             else
                 MessageBox.Show("Chọn ít hoy !");
@@ -189,7 +190,7 @@ namespace QuanLyQuanAn
                 hoaDon.Items.Remove(hoaDon.SelectedItems[0]);
                 i--;//giam so luong mon an (khac nhau)
             }
-            tongTien();
+            tbxTongCong.Text =  tongTien().ToString();
            
         }
 
@@ -228,7 +229,7 @@ namespace QuanLyQuanAn
                         i--;
 
                     }
-                tongTien();
+               tbxTongCong.Text =  tongTien().ToString();
             }
             else
             {
@@ -305,20 +306,20 @@ namespace QuanLyQuanAn
         {
             if (tbxPhiDichVu.Text == "")
                 tbxPhiDichVu.Text = "0";
-            tongTien();
+           tbxTongCong.Text =  tongTien().ToString();
         }
 
         private void tbxGiamGia_TextChanged(object sender, EventArgs e)
         {
             if (tbxGiamGia.Text == "")
                 tbxGiamGia.Text = "0";
-            tongTien();
+            tbxTongCong.Text =  tongTien().ToString();
         }
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {
             if(tbxSearch.Text != "")
-            bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%'", tbxSearch.Text);
+            bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE  '%{1}%'", tbxSearch.Text,tbxMaCN);
             else
                 bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);
 
@@ -338,6 +339,8 @@ namespace QuanLyQuanAn
             donHang["ThoiDiem"] = dtp.Text;
             donHang["TrangThai"] = "Chưa thanh toán !";
             donHang["MaBan"] = listView_DSBAN.SelectedItems[0].Text;
+            donHang["Loai"] = cbxLoaiHoaDon.Text;
+            donHang["TongTienDonHang"] = tbxTongCong.Text;
            
             dsDonHang.Rows.Add(donHang);
             xulydulieu.ghiBang("DonHang", dsDonHang);//DonHang
