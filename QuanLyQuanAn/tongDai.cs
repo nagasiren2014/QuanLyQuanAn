@@ -51,12 +51,31 @@ namespace QuanLyQuanAn
             DanhSachMonAn_dgv.DataSource = bientoancuc.BangMonAn;
             DanhSachChiNhanh_Dgv.SelectionChanged += DanhSachChiNhanh_Dgv_SelectionChanged;
             //----------------load bang lich su khach hang------------------
-            TongDai_KH_SDT_TextBox.Text = "";
-            
+            TongDai_KH_SDT_TextBox.Text = "";           
             dsLichSu = DocBangLichSuKH();
             LichSuMuaHang_Dgv.DataSource = dsLichSu;
+            //----------------load bang Khach Hang--------------------------
+            TongDai_KH_SDT_TextBox.Text = bientoancuc.SDT_KhachHang;
+            bientoancuc.dsKhachHang = DocBangKH();
+            TongDai_KH_Ten_TextBox.Text = bientoancuc.Ten_KhachHang;
+            TongDai_KH_DiaChi_TextBox.Text = bientoancuc.DiaChi_KhachHang;
+            TongDai_KH_TinhThanh_TextBox.Text = bientoancuc.TinhThanh_KhachHang;
 
         }
+        public DataTable DocBangKH()
+        {
+            OleDbConnection oleConnection = new OleDbConnection();
+            oleConnection.ConnectionString = bientoancuc.connectionString;
+            OleDbCommand oleSelectCommand = new OleDbCommand();
+            oleSelectCommand.Connection = oleConnection;
+            oleSelectCommand.CommandText = "Select * From KhachHang where KhachHang.SDT like '%" + bientoancuc.SDT_KhachHang + "%'";
+            OleDbDataAdapter oleDataAdapter = new OleDbDataAdapter();
+            oleDataAdapter.SelectCommand = oleSelectCommand;
+            DataTable dt = new DataTable();
+            oleDataAdapter.Fill(dt);
+            return dt;
+        }
+
         public DataTable DocBangLichSuKH()
         {
             OleDbConnection oleConnection = new OleDbConnection();
@@ -237,7 +256,7 @@ namespace QuanLyQuanAn
         {
             if (DanhSachChiNhanh_Dgv.SelectedRows.Count == 1)
             {
-                TextBoxChiNhanh.Text = DanhSachChiNhanh_Dgv.SelectedRows[0].Cells["TenChiNhanh"].Value.ToString();
+                TextBoxChiNhanh.Text = DanhSachChiNhanh_Dgv.SelectedRows[0].Cells["MaChiNhanh"].Value.ToString();
             }
 
         }
@@ -249,6 +268,54 @@ namespace QuanLyQuanAn
             LichSuMuaHang_Dgv.DataSource = dsLichSu;
         }
 
+        private void XacNhanKH_Button_Click(object sender, EventArgs e)
+        {
+            bientoancuc.SDT_KhachHang = TongDai_KH_SDT_TextBox.Text;
+            bientoancuc.dsKhachHang = DocBangKH();
+            for (int i = 0; i < bientoancuc.dsKhachHang.Rows.Count; i++)
+            {
+                string s = bientoancuc.dsKhachHang.Rows[i]["SDT"].ToString();
+                TongDai_KH_SDT_TextBox.Text = bientoancuc.SDT_KhachHang;
 
+                bientoancuc.Ten_KhachHang = bientoancuc.dsKhachHang.Rows[i]["TenKhachHang"].ToString();
+                TongDai_KH_Ten_TextBox.Text = bientoancuc.Ten_KhachHang;
+
+                bientoancuc.DiaChi_KhachHang = bientoancuc.dsKhachHang.Rows[i]["DiaChi"].ToString();
+                TongDai_KH_DiaChi_TextBox.Text = bientoancuc.DiaChi_KhachHang;
+
+                bientoancuc.TinhThanh_KhachHang = bientoancuc.dsKhachHang.Rows[i]["TinhThanh"].ToString();
+                TongDai_KH_TinhThanh_TextBox.Text = bientoancuc.TinhThanh_KhachHang;
+            }
+
+        }
+
+
+
+        private void TongDai_SearchMonAn_Texbox_TextChanged(object sender, EventArgs e)
+        {
+            if (TongDai_SearchMonAn_Texbox.Text != "")
+                bientoancuc.BangMonAn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE '%{1}%'", TongDai_SearchMonAn_Texbox.Text,TextBoxChiNhanh.Text);
+            else
+                bientoancuc.BangMonAn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", TextBoxChiNhanh.Text);
+
+        }
+
+        private void KhachCu_Button_Click(object sender, EventArgs e)
+        {
+            this.TongDai_KH_Ten_TextBox.ReadOnly = true;
+            this.TongDai_KH_DiaChi_TextBox.ReadOnly = true;
+            this.TongDai_KH_TinhThanh_TextBox.ReadOnly = true;
+        }
+
+        private void KhachMoi_Button_Click(object sender, EventArgs e)
+        {
+            this.TongDai_KH_Ten_TextBox.ReadOnly = false;
+            this.TongDai_KH_DiaChi_TextBox.ReadOnly = false;
+            this.TongDai_KH_TinhThanh_TextBox.ReadOnly = false;
+            TongDai_KH_SDT_TextBox.Text = "";
+            TongDai_KH_Ten_TextBox.Text = "";
+            TongDai_KH_DiaChi_TextBox.Text = "";
+            TongDai_KH_TinhThanh_TextBox.Text = "";
+        }
     }
 }
