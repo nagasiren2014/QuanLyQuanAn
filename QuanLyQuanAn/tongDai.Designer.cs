@@ -62,31 +62,30 @@
             this.DanhSachMonAn_dgv = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.danhMucBindingSource = new System.Windows.Forms.BindingSource(this.components);
-         //   this.menu = new QuanLyQuanAn.menu();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TongDai_SearchMonAn_Texbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-        //    this.danhMucTableAdapter = new QuanLyQuanAn.menuTableAdapters.DanhMucTableAdapter();
             this.label7 = new System.Windows.Forms.Label();
             this.TongDai_KH_SDT_TextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TongDai_KH_Ten_TextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.TongDai_KH_DiaChi_TextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button6 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TongDaiTinhThanh_label = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.TongDai_KH_TinhThanh_TextBox = new System.Windows.Forms.TextBox();
+            this.XacNhanKH_Button = new System.Windows.Forms.Button();
             this.LichSuMuaHang_Dgv = new System.Windows.Forms.DataGridView();
+            this.KhachCu_Button = new System.Windows.Forms.Button();
+            this.KhachMoi_Button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachChiNhanh_Dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachMonAn_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).BeginInit();
-          //  ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LichSuMuaHang_Dgv)).BeginInit();
             this.SuspendLayout();
@@ -400,19 +399,15 @@
             // danhMucBindingSource
             // 
             this.danhMucBindingSource.DataMember = "DanhMuc";
-         //   this.danhMucBindingSource.DataSource = this.menu;
             // 
-            // menu
+            // TongDai_SearchMonAn_Texbox
             // 
-          ///  this.menu.DataSetName = "menu";
-          //  this.menu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(724, 225);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 20);
-            this.textBox1.TabIndex = 52;
+            this.TongDai_SearchMonAn_Texbox.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TongDai_SearchMonAn_Texbox.Location = new System.Drawing.Point(724, 225);
+            this.TongDai_SearchMonAn_Texbox.Name = "TongDai_SearchMonAn_Texbox";
+            this.TongDai_SearchMonAn_Texbox.Size = new System.Drawing.Size(256, 25);
+            this.TongDai_SearchMonAn_Texbox.TabIndex = 52;
+            this.TongDai_SearchMonAn_Texbox.TextChanged += new System.EventHandler(this.TongDai_SearchMonAn_Texbox_TextChanged);
             // 
             // label1
             // 
@@ -423,10 +418,6 @@
             this.label1.Size = new System.Drawing.Size(37, 18);
             this.label1.TabIndex = 51;
             this.label1.Text = "Tìm:";
-            // 
-            // danhMucTableAdapter
-            // 
-           // this.danhMucTableAdapter.ClearBeforeFill = true;
             // 
             // label7
             // 
@@ -467,13 +458,14 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Tên:";
             // 
-            // textBox6
+            // TongDai_KH_Ten_TextBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(120, 59);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(198, 22);
-            this.textBox6.TabIndex = 23;
+            this.TongDai_KH_Ten_TextBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TongDai_KH_Ten_TextBox.Location = new System.Drawing.Point(120, 59);
+            this.TongDai_KH_Ten_TextBox.Name = "TongDai_KH_Ten_TextBox";
+            this.TongDai_KH_Ten_TextBox.ReadOnly = true;
+            this.TongDai_KH_Ten_TextBox.Size = new System.Drawing.Size(198, 22);
+            this.TongDai_KH_Ten_TextBox.TabIndex = 23;
             // 
             // label12
             // 
@@ -485,13 +477,14 @@
             this.label12.TabIndex = 32;
             this.label12.Text = "Địa chỉ:";
             // 
-            // textBox7
+            // TongDai_KH_DiaChi_TextBox
             // 
-            this.textBox7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(120, 87);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(198, 22);
-            this.textBox7.TabIndex = 31;
+            this.TongDai_KH_DiaChi_TextBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TongDai_KH_DiaChi_TextBox.Location = new System.Drawing.Point(120, 87);
+            this.TongDai_KH_DiaChi_TextBox.Name = "TongDai_KH_DiaChi_TextBox";
+            this.TongDai_KH_DiaChi_TextBox.ReadOnly = true;
+            this.TongDai_KH_DiaChi_TextBox.Size = new System.Drawing.Size(198, 22);
+            this.TongDai_KH_DiaChi_TextBox.TabIndex = 31;
             // 
             // label9
             // 
@@ -513,7 +506,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(393, 89);
+            this.button6.Location = new System.Drawing.Point(460, 87);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(205, 50);
             this.button6.TabIndex = 39;
@@ -522,15 +515,17 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.KhachMoi_Button);
+            this.panel2.Controls.Add(this.KhachCu_Button);
             this.panel2.Controls.Add(this.TongDaiTinhThanh_label);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.TongDai_KH_TinhThanh_TextBox);
+            this.panel2.Controls.Add(this.XacNhanKH_Button);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.textBox7);
+            this.panel2.Controls.Add(this.TongDai_KH_DiaChi_TextBox);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.TongDai_KH_Ten_TextBox);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.TongDai_KH_SDT_TextBox);
@@ -550,23 +545,25 @@
             this.TongDaiTinhThanh_label.TabIndex = 42;
             this.TongDaiTinhThanh_label.Text = "Tỉnh Thành:";
             // 
-            // textBox2
+            // TongDai_KH_TinhThanh_TextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(120, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 23);
-            this.textBox2.TabIndex = 41;
+            this.TongDai_KH_TinhThanh_TextBox.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TongDai_KH_TinhThanh_TextBox.Location = new System.Drawing.Point(120, 115);
+            this.TongDai_KH_TinhThanh_TextBox.Name = "TongDai_KH_TinhThanh_TextBox";
+            this.TongDai_KH_TinhThanh_TextBox.ReadOnly = true;
+            this.TongDai_KH_TinhThanh_TextBox.Size = new System.Drawing.Size(197, 23);
+            this.TongDai_KH_TinhThanh_TextBox.TabIndex = 41;
             // 
-            // button7
+            // XacNhanKH_Button
             // 
-            this.button7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(393, 31);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(205, 46);
-            this.button7.TabIndex = 40;
-            this.button7.Text = "Xác Nhận Khách Hàng";
-            this.button7.UseVisualStyleBackColor = true;
+            this.XacNhanKH_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.XacNhanKH_Button.Location = new System.Drawing.Point(460, 19);
+            this.XacNhanKH_Button.Name = "XacNhanKH_Button";
+            this.XacNhanKH_Button.Size = new System.Drawing.Size(205, 46);
+            this.XacNhanKH_Button.TabIndex = 40;
+            this.XacNhanKH_Button.Text = "Xác Nhận Khách Hàng";
+            this.XacNhanKH_Button.UseVisualStyleBackColor = true;
+            this.XacNhanKH_Button.Click += new System.EventHandler(this.XacNhanKH_Button_Click);
             // 
             // LichSuMuaHang_Dgv
             // 
@@ -576,6 +573,28 @@
             this.LichSuMuaHang_Dgv.Size = new System.Drawing.Size(283, 170);
             this.LichSuMuaHang_Dgv.TabIndex = 54;
             // 
+            // KhachCu_Button
+            // 
+            this.KhachCu_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhachCu_Button.Location = new System.Drawing.Point(334, 19);
+            this.KhachCu_Button.Name = "KhachCu_Button";
+            this.KhachCu_Button.Size = new System.Drawing.Size(94, 46);
+            this.KhachCu_Button.TabIndex = 43;
+            this.KhachCu_Button.Text = "Khách Cũ";
+            this.KhachCu_Button.UseVisualStyleBackColor = true;
+            this.KhachCu_Button.Click += new System.EventHandler(this.KhachCu_Button_Click);
+            // 
+            // KhachMoi_Button
+            // 
+            this.KhachMoi_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhachMoi_Button.Location = new System.Drawing.Point(334, 91);
+            this.KhachMoi_Button.Name = "KhachMoi_Button";
+            this.KhachMoi_Button.Size = new System.Drawing.Size(94, 46);
+            this.KhachMoi_Button.TabIndex = 44;
+            this.KhachMoi_Button.Text = "Khách Mới";
+            this.KhachMoi_Button.UseVisualStyleBackColor = true;
+            this.KhachMoi_Button.Click += new System.EventHandler(this.KhachMoi_Button_Click);
+            // 
             // tongDai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -583,7 +602,7 @@
             this.ClientSize = new System.Drawing.Size(1008, 634);
             this.Controls.Add(this.LichSuMuaHang_Dgv);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TongDai_SearchMonAn_Texbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DanhSachMonAn_dgv);
             this.Controls.Add(this.DanhSachChiNhanh_Dgv);
@@ -611,7 +630,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachChiNhanh_Dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachMonAn_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).EndInit();
-           // ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LichSuMuaHang_Dgv)).EndInit();
@@ -653,7 +671,7 @@
         private System.Windows.Forms.ColumnHeader DVT;
         private System.Windows.Forms.ColumnHeader DonGia;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TongDai_SearchMonAn_Texbox;
         private System.Windows.Forms.Label label1;
       //  private menu menu;
         private System.Windows.Forms.BindingSource danhMucBindingSource;
@@ -662,16 +680,18 @@
         private System.Windows.Forms.TextBox TongDai_KH_SDT_TextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TongDai_KH_Ten_TextBox;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox TongDai_KH_DiaChi_TextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button XacNhanKH_Button;
         private System.Windows.Forms.Label TongDaiTinhThanh_label;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TongDai_KH_TinhThanh_TextBox;
         private System.Windows.Forms.DataGridView LichSuMuaHang_Dgv;
+        private System.Windows.Forms.Button KhachMoi_Button;
+        private System.Windows.Forms.Button KhachCu_Button;
     }
 }

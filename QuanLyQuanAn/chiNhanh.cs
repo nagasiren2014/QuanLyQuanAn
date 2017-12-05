@@ -318,7 +318,7 @@ namespace QuanLyQuanAn
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {
             if(tbxSearch.Text != "")
-            bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%'", tbxSearch.Text);
+            bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE '%{1}%'", tbxSearch.Text, tbxMaCN.Text);
             else
                 bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);
 
@@ -552,6 +552,7 @@ namespace QuanLyQuanAn
 
 
         }
+
     }
    
 }
