@@ -65,11 +65,6 @@
       <DependentUpon>doiMK.cs</DependentUpon>
     </Compile>
     <Compile Include="Items.cs" />
-    <Compile Include="menu.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>menu.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,17 +122,6 @@
     <EmbeddedResource Include="xemHoaDon.resx">
       <DependentUpon>xemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="menu.xsc">
-      <DependentUpon>menu.xsd</DependentUpon>
-    </None>
-    <None Include="menu.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>menu.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="menu.xss">
-      <DependentUpon>menu.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

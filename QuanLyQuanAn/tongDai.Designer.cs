@@ -62,10 +62,10 @@
             this.DanhSachMonAn_dgv = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.danhMucBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menu = new QuanLyQuanAn.menu();
+         //   this.menu = new QuanLyQuanAn.menu();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.danhMucTableAdapter = new QuanLyQuanAn.menuTableAdapters.DanhMucTableAdapter();
+        //    this.danhMucTableAdapter = new QuanLyQuanAn.menuTableAdapters.DanhMucTableAdapter();
             this.label7 = new System.Windows.Forms.Label();
             this.TongDai_KH_SDT_TextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -86,7 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachChiNhanh_Dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachMonAn_dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
+          //  ((System.ComponentModel.ISupportInitialize)(this.menu)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LichSuMuaHang_Dgv)).BeginInit();
             this.SuspendLayout();
@@ -400,12 +400,12 @@
             // danhMucBindingSource
             // 
             this.danhMucBindingSource.DataMember = "DanhMuc";
-            this.danhMucBindingSource.DataSource = this.menu;
+         //   this.danhMucBindingSource.DataSource = this.menu;
             // 
             // menu
             // 
-            this.menu.DataSetName = "menu";
-            this.menu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+          ///  this.menu.DataSetName = "menu";
+          //  this.menu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox1
             // 
@@ -426,7 +426,7 @@
             // 
             // danhMucTableAdapter
             // 
-            this.danhMucTableAdapter.ClearBeforeFill = true;
+           // this.danhMucTableAdapter.ClearBeforeFill = true;
             // 
             // label7
             // 
@@ -611,7 +611,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachChiNhanh_Dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachMonAn_dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.menu)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LichSuMuaHang_Dgv)).EndInit();
@@ -655,9 +655,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private menu menu;
+      //  private menu menu;
         private System.Windows.Forms.BindingSource danhMucBindingSource;
-        private menuTableAdapters.DanhMucTableAdapter danhMucTableAdapter;
+      //  private menuTableAdapters.DanhMucTableAdapter danhMucTableAdapter;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TongDai_KH_SDT_TextBox;
         private System.Windows.Forms.Label label6;

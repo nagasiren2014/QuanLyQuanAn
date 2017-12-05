@@ -43,20 +43,22 @@
             this.tbxGiamGia = new System.Windows.Forms.TextBox();
             this.tbxTongCong = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_maDH = new System.Windows.Forms.Label();
+            this.lb_mdh = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.soBan = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.cbxLoaiHoaDon = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
@@ -85,8 +87,6 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lb_mdh = new System.Windows.Forms.Label();
-            this.lb_maDH = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.soBan)).BeginInit();
             this.panel2.SuspendLayout();
@@ -243,6 +243,23 @@
             this.panel1.TabIndex = 13;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // lb_maDH
+            // 
+            this.lb_maDH.AutoSize = true;
+            this.lb_maDH.Location = new System.Drawing.Point(78, 30);
+            this.lb_maDH.Name = "lb_maDH";
+            this.lb_maDH.Size = new System.Drawing.Size(0, 13);
+            this.lb_maDH.TabIndex = 19;
+            // 
+            // lb_mdh
+            // 
+            this.lb_mdh.AutoSize = true;
+            this.lb_mdh.Location = new System.Drawing.Point(9, 30);
+            this.lb_mdh.Name = "lb_mdh";
+            this.lb_mdh.Size = new System.Drawing.Size(77, 13);
+            this.lb_mdh.TabIndex = 19;
+            this.lb_mdh.Text = "Mã đơn hàng: ";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -306,16 +323,16 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "HOÁ ĐƠN";
             // 
-            // button6
+            // btn_ThanhToan
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(631, 484);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 70);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Thanh toán và in hoá đơn";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btn_ThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThanhToan.Location = new System.Drawing.Point(631, 484);
+            this.btn_ThanhToan.Name = "btn_ThanhToan";
+            this.btn_ThanhToan.Size = new System.Drawing.Size(75, 70);
+            this.btn_ThanhToan.TabIndex = 17;
+            this.btn_ThanhToan.Text = "Thanh toán và in hoá đơn";
+            this.btn_ThanhToan.UseVisualStyleBackColor = true;
+            this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
             // 
             // label6
             // 
@@ -373,19 +390,19 @@
             this.textBox6.Size = new System.Drawing.Size(198, 22);
             this.textBox6.TabIndex = 23;
             // 
-            // dateTimePicker1
+            // dtp
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(118, 117);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 24;
+            this.dtp.Location = new System.Drawing.Point(118, 117);
+            this.dtp.Name = "dtp";
+            this.dtp.Size = new System.Drawing.Size(200, 20);
+            this.dtp.TabIndex = 24;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dtp);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.tbxTenNV);
@@ -401,7 +418,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(693, 168);
             this.panel2.TabIndex = 25;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button9
             // 
@@ -654,23 +670,6 @@
             this.columnHeader3.Text = "Tổng tiền";
             this.columnHeader3.Width = 128;
             // 
-            // lb_mdh
-            // 
-            this.lb_mdh.AutoSize = true;
-            this.lb_mdh.Location = new System.Drawing.Point(9, 30);
-            this.lb_mdh.Name = "lb_mdh";
-            this.lb_mdh.Size = new System.Drawing.Size(77, 13);
-            this.lb_mdh.TabIndex = 19;
-            this.lb_mdh.Text = "Mã đơn hàng: ";
-            // 
-            // lb_maDH
-            // 
-            this.lb_maDH.AutoSize = true;
-            this.lb_maDH.Location = new System.Drawing.Point(78, 30);
-            this.lb_maDH.Name = "lb_maDH";
-            this.lb_maDH.Size = new System.Drawing.Size(0, 13);
-            this.lb_maDH.TabIndex = 19;
-            // 
             // chiNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -685,7 +684,7 @@
             this.Controls.Add(this.btnThemBan);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_ThanhToan);
             this.Controls.Add(this.btn_xuongBep);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_xoa);
@@ -731,14 +730,14 @@
         private System.Windows.Forms.TextBox tbxTongCong;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_ThanhToan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.NumericUpDown soBan;
         private System.Windows.Forms.Label label11;
