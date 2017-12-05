@@ -18,11 +18,13 @@ namespace QuanLyQuanAn
         int j = 1;//số lượng của mỗi món
         int ban;//so ban trong listview
         int dt_ban ;//mã bàn max
+        int mdh;
         DataTable dsBan = new DataTable();
         DataTable ban_cost = new DataTable();
         DataTable dsBanFull = new DataTable();
         Items food = new Items();//list cac mon cua hoa don
         DataTable dsDonHang = new DataTable();
+        DataTable donHangChiTiet = new DataTable();
         public chiNhanh()
         {
             InitializeComponent();
@@ -59,15 +61,9 @@ namespace QuanLyQuanAn
 
       
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+      
 
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-           
-        }
+       
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -254,12 +250,12 @@ namespace QuanLyQuanAn
 
         private void chiNhanh_Load(object sender, EventArgs e)
         {
-            lb_maDH.Text = "DH" + (dsDonHang.Rows.Count + 1).ToString();
+            dsDonHang = xulydulieu.docBang("Select * From DonHang");
+            mdh = dsDonHang.Rows.Count + 1;
+            lb_maDH.Text = "DH" + (mdh).ToString();
 
             bientoancuc.mn = xulydulieu.docBang("Select * From MonAn");
             dgvMenu.DataSource = bientoancuc.mn;
-
-
 
             tbxMaNV.Text = bientoancuc.MaNV;
             tbxMaCN.Text = bientoancuc.MaCN;
@@ -328,11 +324,37 @@ namespace QuanLyQuanAn
 
         }
 
-    
+
 
         private void btn_xuongBep_Click(object sender, EventArgs e)
         {
             ghiListHoaDon();
+            
+           
+
+            DataRow donHang = dsDonHang.NewRow();//////
+            donHang["MaDonHang"] = lb_maDH.Text;
+            donHang["MaChiNhanh"] = tbxMaCN.Text;
+            donHang["ThoiDiem"] = dtp.Text;
+            donHang["TrangThai"] = "Chưa thanh toán !";
+            donHang["MaBan"] = listView_DSBAN.SelectedItems[0].Text;
+           
+            dsDonHang.Rows.Add(donHang);
+            xulydulieu.ghiBang("DonHang", dsDonHang);//DonHang
+
+            dsBanFull = xulydulieu.docBang("Select * From Ban");
+            donHangChiTiet = xulydulieu.docBang("Select * From DonHangChiTiet");
+           
+            for (int k = 0; k < bientoancuc.mon.Count; k++)
+            {
+                DataRow dhct = donHangChiTiet.NewRow();
+                dhct["MaDonHang"] = lb_maDH.Text;
+                dhct["TenMonAn"] = bientoancuc.mon[k].xuatTen();
+                dhct["SoLuong"] = bientoancuc.mon[k].xuatSL();
+                donHangChiTiet.Rows.Add(dhct);
+            }
+            xulydulieu.ghiBang("DonHangChiTiet",donHangChiTiet);
+
 
             if (hoaDon.Items.Count == 0)
             {
@@ -387,13 +409,14 @@ namespace QuanLyQuanAn
                             cost["MaBan"] = listView_DSBAN.SelectedItems[0].Text;
                             cost["TongTien"] = tbxTongCong.Text;
 
-
+                            
                             for (int i = 0; i < dsBanFull.Rows.Count; i++)
                             {
                                 if (dsBanFull.Rows[i]["MaBan"].ToString() == listView_DSBAN.SelectedItems[0].Text)
                                 {
 
                                     dsBanFull.Rows[i]["TrangThai"] = "Có khách !";
+                                    dsBanFull.Rows[i]["MaDonHang"] = lb_maDH.Text;
                                     xulydulieu.ghiBang("Ban", dsBanFull);
                                     break;
                                 }
@@ -407,6 +430,7 @@ namespace QuanLyQuanAn
                     }
                 }
             }
+            lb_maDH.Text = "DH" + (mdh + 1).ToString();
         }
 
         private void listView_DSBAN_SelectedIndexChanged(object sender, EventArgs e)
@@ -483,7 +507,51 @@ namespace QuanLyQuanAn
             
         }
 
-       
+        private void btn_ThanhToan_Click(object sender, EventArgs e)
+        {
+      
+
+            dsDonHang = xulydulieu.docBang("Select * From DonHang WHERE MaBan LIKE '" + listView_DSBAN.SelectedItems[0].Text + "'");
+
+            for (int d = 0; d < dsDonHang.Rows.Count; d++)
+            {
+                if (dsDonHang.Rows[d]["TrangThai"].ToString() == "Chưa thanh toán !")
+                {
+                    dsDonHang.Rows[d]["TrangThai"] = "Đã thanh toán !";
+                    break;
+                }
+            }
+
+            xulydulieu.ghiBang("DonHang",dsDonHang);
+
+
+            dsBanFull = xulydulieu.docBang("Select * From Ban");
+            for (int i = 0; i < dsBanFull.Rows.Count; i++)
+            {
+                if (dsBanFull.Rows[i]["MaBan"].ToString() == listView_DSBAN.SelectedItems[0].Text)
+                {
+
+                    dsBanFull.Rows[i]["TrangThai"] = "Trống !";
+                    xulydulieu.ghiBang("Ban", dsBanFull);
+                    break;
+                }
+            }
+            ban_cost = xulydulieu.docBang("Select * From TongTien");
+            for (int i = 0; i < ban_cost.Rows.Count; i++)
+            {
+                if (ban_cost.Rows[i]["MaBan"].ToString() == listView_DSBAN.SelectedItems[0].Text)
+                {
+
+                    ban_cost.Rows[i].Delete();
+                    xulydulieu.ghiBang("TongTien", ban_cost);
+                    break;
+                }
+            }
+            listView_DSBAN.SelectedItems[0].SubItems[1].Text = "Trống !";
+            listView_DSBAN.SelectedItems[0].SubItems[2].Text = "0";
+
+
+        }
     }
    
 }
