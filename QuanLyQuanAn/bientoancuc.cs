@@ -11,10 +11,10 @@ namespace QuanLyQuanAn
     {
         public static DataTable dsNhanVien;
         //public static DataTable dsChiNhanh;
-        public static string  MaNV, TenNhanVien, MaCN,MK;
+        public static string MaNV, TenNhanVien, MaCN, MK;
         public static DataTable BangChiNhanh;
         public static DataTable BangMonAn;
-       
+
         public static DataTable mn;
         public static DataTable dsTaiKhoan;
         public static int viTriTK;
@@ -22,19 +22,11 @@ namespace QuanLyQuanAn
 
         public static DataTable dsKhachHang;
         public static string SDT_KhachHang, Ten_KhachHang, DiaChi_KhachHang, TinhThanh_KhachHang;
-       // public static string connectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QuanLyQuanAn_Data;Data Source=DESKTOP-QR067OS";
+        // public static string connectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QuanLyQuanAn_Data;Data Source=DESKTOP-QR067OS";
         public static string connectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QuanLyQuanAn_Data;Data Source=VAIO";
 
-<<<<<<< HEAD
-       public static  List<Items> mon = new List<Items>();
+        public static List<Items> mon = new List<Items>();
     }
-=======
-        public static  List<Items> mon = new List<Items>();
-        
-           
-
->>>>>>> 0d217bea48a85d33a352e15f2b92c8112412cbb7
-
 }
 
 

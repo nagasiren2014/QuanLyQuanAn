@@ -314,10 +314,7 @@ namespace QuanLyQuanAn
             if (tbxSearch.Text != "")
             {
                 bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE  '%{1}%'", tbxSearch.Text, tbxMaCN);
-<<<<<<< HEAD
-=======
 
->>>>>>> 0d217bea48a85d33a352e15f2b92c8112412cbb7
                 bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE '%{1}%'", tbxSearch.Text, tbxMaCN.Text);
             }
             else
@@ -330,9 +327,12 @@ namespace QuanLyQuanAn
         private void btn_xuongBep_Click(object sender, EventArgs e)
         {
             ghiListHoaDon();
-            
-           
 
+            DataTable KhachHang = xulydulieu.docBang("Select * From KhachHang");
+            DataRow kh = KhachHang.NewRow();
+            kh["SDT"] = tbxSDT.Text;
+            KhachHang.Rows.Add(kh);
+            xulydulieu.ghiBang("KhachHang",KhachHang);
             DataRow donHang = dsDonHang.NewRow();//////
             donHang["MaDonHang"] = lb_maDH.Text;
             donHang["MaChiNhanh"] = tbxMaCN.Text;
