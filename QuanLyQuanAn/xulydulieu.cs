@@ -27,5 +27,15 @@ namespace QuanLyQuanAn
             OleDbCommandBuilder buider = new OleDbCommandBuilder(adapter);
             adapter.Update(dt);
         }
+        public static int kiemTraCot(DataTable tenBang, String tenCot, String chuoiCanTim)
+        {
+            for (int i = 0; i < tenBang.Rows.Count; i++)
+            {
+                if (tenBang.Rows[i][tenCot].ToString() == chuoiCanTim)
+                    return 1;
+
+            }
+            return 0;
+        }
     }
 }

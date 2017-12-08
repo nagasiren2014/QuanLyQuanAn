@@ -306,7 +306,7 @@ namespace QuanLyQuanAn
                 bientoancuc.DiaChi_KhachHang = bientoancuc.dsKhachHang.Rows[i]["DiaChi"].ToString();
                 TongDai_KH_DiaChi_TextBox.Text = bientoancuc.DiaChi_KhachHang;
 
-                bientoancuc.TinhThanh_KhachHang = bientoancuc.dsKhachHang.Rows[i]["TinhThanh"].ToString();
+                bientoancuc.TinhThanh_KhachHang = bientoancuc.dsKhachHang.Rows[i]["Quan"].ToString();
                 TongDai_KH_TinhThanh_TextBox.Text = bientoancuc.TinhThanh_KhachHang;
             }
 
@@ -336,7 +336,7 @@ namespace QuanLyQuanAn
             GhiTTKhachHang["SDT"] = TongDai_KH_SDT_TextBox.Text;
             GhiTTKhachHang["TenKhachHang"] = TongDai_KH_Ten_TextBox.Text;
             GhiTTKhachHang["DiaChi"] = TongDai_KH_DiaChi_TextBox.Text;
-            GhiTTKhachHang["TinhThanh"] = TongDai_KH_TinhThanh_TextBox.Text;
+            GhiTTKhachHang["Quan"] = TongDai_KH_TinhThanh_TextBox.Text;
 
             dsKhachHangMoi.Rows.Add(GhiTTKhachHang);
             xulydulieu.ghiBang("KhachHang", dsKhachHangMoi);//ghi vao bang Khach Hang
@@ -363,7 +363,7 @@ namespace QuanLyQuanAn
             DataRow donHang = dsDonHang.NewRow();
             donHang["MaDonHang"] = MaHoaDon_Label.Text;
             donHang["MaChiNhanh"] = TextBoxChiNhanh.Text;
-            donHang["ThoiDiem"] = dtp.Text;
+            donHang["ThoiDiem"] = dtp.Value.ToString("yyyy/MM/dd HH:mm:ss");
             donHang["TrangThai"] = "Chưa thanh toán !";
             string str = TextBoxChiNhanh.Text.Substring(2);
                 donHang["MaBan"] = "TD"+str;
@@ -396,6 +396,13 @@ namespace QuanLyQuanAn
                 xemHoaDon hd = new xemHoaDon();
                 hd.ShowDialog();
             }
+            DataTable lichSuMuaHang = xulydulieu.docBang("Select * From LichSuMuaHang");
+            DataRow lsmh = lichSuMuaHang.NewRow();
+            lsmh["ThoiGian"] = dtp.Value.ToString("yyyy/MM/dd HH:mm:ss");
+            lsmh["TongHoaDon"] = Textbox_TongCong.Text;
+            lsmh["SDT"] = TongDai_KH_SDT_TextBox.Text;
+            lichSuMuaHang.Rows.Add(lsmh);
+            xulydulieu.ghiBang("LichSuMuaHang", lichSuMuaHang);
 
         }
 
