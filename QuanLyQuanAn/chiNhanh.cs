@@ -53,22 +53,6 @@ namespace QuanLyQuanAn
             return max;
         }
 
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-      
-
-      
-
-       
-
-        
-
-       
-
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -82,8 +66,6 @@ namespace QuanLyQuanAn
         {
 
         }
-
-
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -114,7 +96,7 @@ namespace QuanLyQuanAn
                 bientoancuc.mon.Add(food);
             }
         }
-
+#region HoaDon
         public void AddItem()
         {
             j = 1;
@@ -141,7 +123,6 @@ namespace QuanLyQuanAn
             tc = tc - tc * int.Parse(tbxGiamGia.Text) / 100;
             return tc;
         }
-
 
         private void btn_them_Click(object sender, EventArgs e)
         {
@@ -185,8 +166,6 @@ namespace QuanLyQuanAn
             tbxTongCong.Text =  tongTien().ToString();
            
         }
-
-
 
         private void btn_bot_Click(object sender, EventArgs e)
         {
@@ -240,7 +219,7 @@ namespace QuanLyQuanAn
         {
 
         }
-
+#endregion
         private void chiNhanh_Load(object sender, EventArgs e)
         {
             dsDonHang = xulydulieu.docBang("Select * From DonHang");
@@ -256,12 +235,7 @@ namespace QuanLyQuanAn
             bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);///////////////Load !
             dsBan = xulydulieu.docBang("Select * From Ban WHERE MaChiNhanh LIKE '%" + bientoancuc.MaCN + "%'");
             ban_cost = xulydulieu.docBang("Select * from TongTien");
-            
-            
-           
-
-           
-
+                  
             ban = 0; // so dong cua listview
             for (int b = 0; b < dsBan.Rows.Count; b++)//doc ds ban
             {
@@ -289,8 +263,6 @@ namespace QuanLyQuanAn
 
                 }
             }
-
-
 
         }
 

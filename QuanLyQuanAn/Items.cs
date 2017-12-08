@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace QuanLyQuanAn
 {
-    class Items
+    public class Items
     {
         public  string ten;
-       public   string sl;
+        public   string sl;
         public  string dvt;
         public  string dongia;
 

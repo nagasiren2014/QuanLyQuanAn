@@ -37,8 +37,6 @@ namespace QuanLyQuanAn
                 hoaDonin.Items[i].SubItems.Add(bientoancuc.mon[i].xuatSL());
                 hoaDonin.Items[i].SubItems.Add(bientoancuc.mon[i].xuatDVT());
                 hoaDonin.Items[i].SubItems.Add(bientoancuc.mon[i].xuatGia());
-
-
             }
         }
     }
