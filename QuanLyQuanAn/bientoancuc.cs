@@ -22,18 +22,14 @@ namespace QuanLyQuanAn
 
         public static DataTable dsKhachHang;
         public static string SDT_KhachHang, Ten_KhachHang, DiaChi_KhachHang, TinhThanh_KhachHang;
-       // public static string connectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QuanLyQuanAn_Data;Data Source=DESKTOP-QR067OS";
-        public static string connectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QuanLyQuanAn_Data;Data Source=VAIO";
+        public static string connectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QuanLyQuanAn_Data;Data Source=DESKTOP-QR067OS";
+        //public static string connectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QuanLyQuanAn_Data;Data Source=VAIO";
 
-<<<<<<< HEAD
+
        public static  List<Items> mon = new List<Items>();
     }
-=======
-        public static  List<Items> mon = new List<Items>();
-        
-           
 
->>>>>>> 0d217bea48a85d33a352e15f2b92c8112412cbb7
+
 
 }
 
