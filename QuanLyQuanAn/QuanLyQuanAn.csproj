@@ -58,6 +58,12 @@
     <Compile Include="chiNhanh.Designer.cs">
       <DependentUpon>chiNhanh.cs</DependentUpon>
     </Compile>
+    <Compile Include="createMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createMember.Designer.cs">
+      <DependentUpon>createMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="doiMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="chiNhanh.resx">
       <DependentUpon>chiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createMember.resx">
+      <DependentUpon>createMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="doiMK.resx">
       <DependentUpon>doiMK.cs</DependentUpon>
