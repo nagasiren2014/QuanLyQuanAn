@@ -314,7 +314,10 @@ namespace QuanLyQuanAn
             if (tbxSearch.Text != "")
             {
                 bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE  '%{1}%'", tbxSearch.Text, tbxMaCN);
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0d217bea48a85d33a352e15f2b92c8112412cbb7
                 bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE '%{1}%'", tbxSearch.Text, tbxMaCN.Text);
             }
             else

@@ -1,1 +1,0 @@
-select *from LichSuMuaHang where LichSuMuaHang.SDT like '01227774315'

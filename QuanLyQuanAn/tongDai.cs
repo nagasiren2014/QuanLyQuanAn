@@ -16,7 +16,7 @@ namespace QuanLyQuanAn
         int i = 0;
         int j = 1;
         DataTable dsLichSu = new DataTable();
-
+        DataTable dsKhachHangMoi = new DataTable();
         #region Front
         public tongDai()
         {
@@ -51,6 +51,7 @@ namespace QuanLyQuanAn
             DanhSachMonAn_dgv.DataSource = bientoancuc.BangMonAn;
             DanhSachChiNhanh_Dgv.SelectionChanged += DanhSachChiNhanh_Dgv_SelectionChanged;
             //----------------load bang lich su khach hang------------------
+            TextBox TongDai_KH_SDT_TextBox = new TextBox();
             TongDai_KH_SDT_TextBox.Text = "";           
             dsLichSu = DocBangLichSuKH();
             LichSuMuaHang_Dgv.DataSource = dsLichSu;
@@ -60,6 +61,11 @@ namespace QuanLyQuanAn
             TongDai_KH_Ten_TextBox.Text = bientoancuc.Ten_KhachHang;
             TongDai_KH_DiaChi_TextBox.Text = bientoancuc.DiaChi_KhachHang;
             TongDai_KH_TinhThanh_TextBox.Text = bientoancuc.TinhThanh_KhachHang;
+
+            dsKhachHangMoi = xulydulieu.docBang("select *from KhachHang");
+
+            //--------------------------------------------------------------
+
 
         }
         public DataTable DocBangKH()
@@ -316,6 +322,22 @@ namespace QuanLyQuanAn
             TongDai_KH_Ten_TextBox.Text = "";
             TongDai_KH_DiaChi_TextBox.Text = "";
             TongDai_KH_TinhThanh_TextBox.Text = "";
+        }
+
+
+
+        private void TaoKHMoi_Button_Click(object sender, EventArgs e)
+        {
+            DataRow GhiTTKhachHang = dsKhachHangMoi.NewRow();
+            GhiTTKhachHang["SDT"] = TongDai_KH_SDT_TextBox.Text;
+            GhiTTKhachHang["TenKhachHang"] = TongDai_KH_Ten_TextBox.Text;
+            GhiTTKhachHang["DiaChi"] = TongDai_KH_DiaChi_TextBox.Text;
+            GhiTTKhachHang["TinhThanh"] = TongDai_KH_TinhThanh_TextBox.Text;
+
+            dsKhachHangMoi.Rows.Add(GhiTTKhachHang);
+            xulydulieu.ghiBang("KhachHang", dsKhachHangMoi);//ghi vao bang Khach Hang
+
+            bientoancuc.dsKhachHang = DocBangKH();
         }
     }
 }
