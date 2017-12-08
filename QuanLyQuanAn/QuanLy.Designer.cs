@@ -45,40 +45,6 @@
             System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Chi Nhánh E", new System.Windows.Forms.TreeNode[] {
             treeNode9,
             treeNode10});
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("A1");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("A2");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Chi Nhánh A", new System.Windows.Forms.TreeNode[] {
-            treeNode12,
-            treeNode13});
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Chi Nhánh B");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Chi Nhánh C");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Chi Nhánh D1");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Chi Nhánh D", new System.Windows.Forms.TreeNode[] {
-            treeNode17});
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-1");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Chi Nhánh E1", new System.Windows.Forms.TreeNode[] {
-            treeNode19});
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-2");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Chi Nhánh E", new System.Windows.Forms.TreeNode[] {
-            treeNode20,
-            treeNode21});
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("A1");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("A2");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Chi Nhánh A", new System.Windows.Forms.TreeNode[] {
-            treeNode23,
-            treeNode24});
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Chi Nhánh B");
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Chi Nhánh C");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Chi Nhánh D1");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Chi Nhánh D", new System.Windows.Forms.TreeNode[] {
-            treeNode28});
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-1");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Chi Nhánh E1", new System.Windows.Forms.TreeNode[] {
-            treeNode30});
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-2");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Chi Nhánh E", new System.Windows.Forms.TreeNode[] {
-            treeNode31,
-            treeNode32});
             this.QuanLy_DanhMucMon_ComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -100,7 +66,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txbDoanhThu1 = new System.Windows.Forms.TextBox();
             this.listView2 = new System.Windows.Forms.ListView();
             this.SLDonHang = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TongDoanhThu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -108,11 +74,11 @@
             this.SLDonHangGiaoDi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SLDonHangMangVe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SLDonHangTongDai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.NTTQN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmbDoanhThu2 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbDoanhThu1 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -120,28 +86,27 @@
             this.listView4 = new System.Windows.Forms.ListView();
             this.NULL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SLDonHang_2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cmbSLDH_Tong_Theo = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.label24 = new System.Windows.Forms.Label();
             this.listView5 = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.cmbSLDH_Loai = new System.Windows.Forms.ComboBox();
+            this.cmbSLDH_Loai_Theo = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbChiPhiTong = new System.Windows.Forms.TextBox();
             this.listView6 = new System.Windows.Forms.ListView();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.ChiPhi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmbChiPhiChiNhanh_Theo = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.treeView2 = new System.Windows.Forms.TreeView();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.cmbChiPhiTong_Theo = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label21 = new System.Windows.Forms.Label();
@@ -149,10 +114,10 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.txbSLMBChiNhanh_Thang = new System.Windows.Forms.TextBox();
+            this.txbSLMB_Thang = new System.Windows.Forms.TextBox();
+            this.cmbSLMBChiNhanh_Thang = new System.Windows.Forms.ComboBox();
+            this.cmbSLMB_Thang = new System.Windows.Forms.ComboBox();
             this.treeView3 = new System.Windows.Forms.TreeView();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -170,6 +135,9 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QuanLy_TenMonAn_Dgv = new System.Windows.Forms.DataGridView();
+            this.txbChonChiNhanh = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txbChiNhanhChiPhi = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -401,13 +369,14 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox8);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.txbChonChiNhanh);
+            this.tabPage1.Controls.Add(this.txbDoanhThu1);
             this.tabPage1.Controls.Add(this.listView2);
-            this.tabPage1.Controls.Add(this.comboBox3);
-            this.tabPage1.Controls.Add(this.treeView1);
+            this.tabPage1.Controls.Add(this.cmbDoanhThu2);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.comboBox4);
+            this.tabPage1.Controls.Add(this.cmbDoanhThu1);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
@@ -418,12 +387,12 @@
             this.tabPage1.Text = "Doanh Thu";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // txbDoanhThu1
             // 
-            this.textBox8.Location = new System.Drawing.Point(283, 14);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(172, 26);
-            this.textBox8.TabIndex = 9;
+            this.txbDoanhThu1.Location = new System.Drawing.Point(283, 14);
+            this.txbDoanhThu1.Name = "txbDoanhThu1";
+            this.txbDoanhThu1.Size = new System.Drawing.Size(172, 26);
+            this.txbDoanhThu1.TabIndex = 9;
             // 
             // listView2
             // 
@@ -431,6 +400,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.NTTQN,
             this.SLDonHang,
             this.TongDoanhThu,
             this.SLDonHangTaiCho,
@@ -439,103 +409,72 @@
             this.SLDonHangTongDai});
             this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(218, 86);
+            this.listView2.Location = new System.Drawing.Point(6, 86);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(754, 302);
+            this.listView2.Size = new System.Drawing.Size(964, 302);
             this.listView2.TabIndex = 8;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
             // 
             // SLDonHang
             // 
-            this.SLDonHang.Text = "Số Lượng Đơn Hàng";
-            this.SLDonHang.Width = 163;
+            this.SLDonHang.DisplayIndex = 2;
+            this.SLDonHang.Text = "SL Đơn Hàng";
+            this.SLDonHang.Width = 114;
             // 
             // TongDoanhThu
             // 
+            this.TongDoanhThu.DisplayIndex = 1;
             this.TongDoanhThu.Text = "Tổng Doanh Thu";
             this.TongDoanhThu.Width = 137;
             // 
             // SLDonHangTaiCho
             // 
-            this.SLDonHangTaiCho.Text = "Đơn Hàng Tại Chổ";
-            this.SLDonHangTaiCho.Width = 147;
+            this.SLDonHangTaiCho.Text = "SLDH Tại Chổ";
+            this.SLDonHangTaiCho.Width = 118;
             // 
             // SLDonHangGiaoDi
             // 
-            this.SLDonHangGiaoDi.Text = " Đơn Hàng Giao Đi";
-            this.SLDonHangGiaoDi.Width = 150;
+            this.SLDonHangGiaoDi.Text = "SLDH Giao Đi";
+            this.SLDonHangGiaoDi.Width = 115;
             // 
             // SLDonHangMangVe
             // 
-            this.SLDonHangMangVe.Text = " Đơn Hàng Mang Về";
-            this.SLDonHangMangVe.Width = 158;
+            this.SLDonHangMangVe.Text = "SLDH Mang Về";
+            this.SLDonHangMangVe.Width = 124;
             // 
             // SLDonHangTongDai
             // 
-            this.SLDonHangTongDai.Text = "Đơn Hàng Tổng Đài";
-            this.SLDonHangTongDai.Width = 155;
+            this.SLDonHangTongDai.Text = "SLDH Tổng Đài";
+            this.SLDonHangTongDai.Width = 151;
             // 
-            // comboBox3
+            // NTTQN
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.NTTQN.Text = "Ngày/Tuần/Tháng/Qúi/Năm";
+            this.NTTQN.Width = 200;
+            // 
+            // cmbDoanhThu2
+            // 
+            this.cmbDoanhThu2.FormattingEnabled = true;
+            this.cmbDoanhThu2.Items.AddRange(new object[] {
             "Ngày",
             "Tuần",
             "Tháng",
             "Quí",
             "Năm"});
-            this.comboBox3.Location = new System.Drawing.Point(216, 47);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(61, 26);
-            this.comboBox3.TabIndex = 7;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeView1.Location = new System.Drawing.Point(6, 86);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Chi Nhánh A1";
-            treeNode1.Text = "A1";
-            treeNode2.Name = "Chi Nhánh A2";
-            treeNode2.Text = "A2";
-            treeNode3.Name = "Chi Nhánh A";
-            treeNode3.Text = "Chi Nhánh A";
-            treeNode4.Name = "Chi Nhánh B";
-            treeNode4.Text = "Chi Nhánh B";
-            treeNode5.Name = "Chi Nhánh C";
-            treeNode5.Text = "Chi Nhánh C";
-            treeNode6.Name = "Chi Nhánh D1";
-            treeNode6.Text = "Chi Nhánh D1";
-            treeNode7.Name = "Chi Nhánh D";
-            treeNode7.Text = "Chi Nhánh D";
-            treeNode8.Name = "Chi Nhánh E1-1";
-            treeNode8.Text = "Chi Nhánh E1-1";
-            treeNode9.Name = "Chi Nhánh E1";
-            treeNode9.Text = "Chi Nhánh E1";
-            treeNode10.Name = "Chi Nhánh E1-2";
-            treeNode10.Text = "Chi Nhánh E1-2";
-            treeNode11.Name = "Chi Nhánh E";
-            treeNode11.Text = "Chi Nhánh E";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode7,
-            treeNode11});
-            this.treeView1.Size = new System.Drawing.Size(204, 302);
-            this.treeView1.TabIndex = 5;
+            this.cmbDoanhThu2.Location = new System.Drawing.Point(465, 47);
+            this.cmbDoanhThu2.Name = "cmbDoanhThu2";
+            this.cmbDoanhThu2.Size = new System.Drawing.Size(61, 26);
+            this.cmbDoanhThu2.TabIndex = 7;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(3, 55);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(198, 18);
+            this.label9.Size = new System.Drawing.Size(167, 18);
             this.label9.TabIndex = 4;
-            this.label9.Text = "Doanh Thu Chi Nhánh Theo";
+            this.label9.Text = "Doanh Thu Chi Nhánh: ";
             // 
             // label10
             // 
@@ -546,19 +485,19 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "Đơn vị : VND";
             // 
-            // comboBox4
+            // cmbDoanhThu1
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cmbDoanhThu1.FormattingEnabled = true;
+            this.cmbDoanhThu1.Items.AddRange(new object[] {
             "Ngày",
             "Tuần",
             "Tháng",
             "Quí",
             "Năm"});
-            this.comboBox4.Location = new System.Drawing.Point(216, 14);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(61, 26);
-            this.comboBox4.TabIndex = 1;
+            this.cmbDoanhThu1.Location = new System.Drawing.Point(216, 14);
+            this.cmbDoanhThu1.Name = "cmbDoanhThu1";
+            this.cmbDoanhThu1.Size = new System.Drawing.Size(61, 26);
+            this.cmbDoanhThu1.TabIndex = 1;
             // 
             // label11
             // 
@@ -597,7 +536,7 @@
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.listView4);
-            this.tabPage6.Controls.Add(this.comboBox5);
+            this.tabPage6.Controls.Add(this.cmbSLDH_Tong_Theo);
             this.tabPage6.Controls.Add(this.label12);
             this.tabPage6.Location = new System.Drawing.Point(4, 27);
             this.tabPage6.Name = "tabPage6";
@@ -613,7 +552,7 @@
             this.NULL,
             this.SLDonHang_2});
             this.listView4.GridLines = true;
-            this.listView4.Location = new System.Drawing.Point(0, 86);
+            this.listView4.Location = new System.Drawing.Point(6, 86);
             this.listView4.Name = "listView4";
             this.listView4.Size = new System.Drawing.Size(452, 262);
             this.listView4.TabIndex = 5;
@@ -623,26 +562,26 @@
             // NULL
             // 
             this.NULL.Text = "Thời gian";
-            this.NULL.Width = 230;
+            this.NULL.Width = 232;
             // 
             // SLDonHang_2
             // 
             this.SLDonHang_2.Text = "Số Lượng Đơn Hàng";
             this.SLDonHang_2.Width = 216;
             // 
-            // comboBox5
+            // cmbSLDH_Tong_Theo
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.cmbSLDH_Tong_Theo.FormattingEnabled = true;
+            this.cmbSLDH_Tong_Theo.Items.AddRange(new object[] {
             "Ngày",
             "Tuần",
             "Tháng",
             "Quí",
             "Năm"});
-            this.comboBox5.Location = new System.Drawing.Point(204, 34);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(204, 26);
-            this.comboBox5.TabIndex = 4;
+            this.cmbSLDH_Tong_Theo.Location = new System.Drawing.Point(204, 34);
+            this.cmbSLDH_Tong_Theo.Name = "cmbSLDH_Tong_Theo";
+            this.cmbSLDH_Tong_Theo.Size = new System.Drawing.Size(204, 26);
+            this.cmbSLDH_Tong_Theo.TabIndex = 4;
             // 
             // label12
             // 
@@ -657,8 +596,8 @@
             // 
             this.tabPage7.Controls.Add(this.label24);
             this.tabPage7.Controls.Add(this.listView5);
-            this.tabPage7.Controls.Add(this.comboBox6);
-            this.tabPage7.Controls.Add(this.comboBox7);
+            this.tabPage7.Controls.Add(this.cmbSLDH_Loai);
+            this.tabPage7.Controls.Add(this.cmbSLDH_Loai_Theo);
             this.tabPage7.Controls.Add(this.label13);
             this.tabPage7.Controls.Add(this.label14);
             this.tabPage7.Location = new System.Drawing.Point(4, 27);
@@ -702,32 +641,32 @@
             this.columnHeader5.Text = "Số Lượng Đơn Hàng";
             this.columnHeader5.Width = 367;
             // 
-            // comboBox6
+            // cmbSLDH_Loai
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.cmbSLDH_Loai.FormattingEnabled = true;
+            this.cmbSLDH_Loai.Items.AddRange(new object[] {
             "Tại Chổ",
             "Giao Đi",
             "Mang Về",
             "Tổng Đài"});
-            this.comboBox6.Location = new System.Drawing.Point(49, 21);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 26);
-            this.comboBox6.TabIndex = 6;
+            this.cmbSLDH_Loai.Location = new System.Drawing.Point(49, 21);
+            this.cmbSLDH_Loai.Name = "cmbSLDH_Loai";
+            this.cmbSLDH_Loai.Size = new System.Drawing.Size(121, 26);
+            this.cmbSLDH_Loai.TabIndex = 6;
             // 
-            // comboBox7
+            // cmbSLDH_Loai_Theo
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.cmbSLDH_Loai_Theo.FormattingEnabled = true;
+            this.cmbSLDH_Loai_Theo.Items.AddRange(new object[] {
             "Ngày",
             "Tuần",
             "Tháng",
             "Quí",
             "Năm"});
-            this.comboBox7.Location = new System.Drawing.Point(250, 21);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(204, 26);
-            this.comboBox7.TabIndex = 5;
+            this.cmbSLDH_Loai_Theo.Location = new System.Drawing.Point(250, 21);
+            this.cmbSLDH_Loai_Theo.Name = "cmbSLDH_Loai_Theo";
+            this.cmbSLDH_Loai_Theo.Size = new System.Drawing.Size(204, 26);
+            this.cmbSLDH_Loai_Theo.TabIndex = 5;
             // 
             // label13
             // 
@@ -749,15 +688,15 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.txbChiNhanhChiPhi);
             this.tabPage3.Controls.Add(this.label23);
-            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.txbChiPhiTong);
             this.tabPage3.Controls.Add(this.listView6);
-            this.tabPage3.Controls.Add(this.comboBox8);
+            this.tabPage3.Controls.Add(this.cmbChiPhiChiNhanh_Theo);
             this.tabPage3.Controls.Add(this.label15);
-            this.tabPage3.Controls.Add(this.treeView2);
             this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.comboBox9);
+            this.tabPage3.Controls.Add(this.cmbChiPhiTong_Theo);
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
@@ -777,87 +716,52 @@
             this.label23.TabIndex = 32;
             this.label23.Text = "BIỂU ĐỒ";
             // 
-            // textBox5
+            // txbChiPhiTong
             // 
-            this.textBox5.Location = new System.Drawing.Point(296, 11);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(227, 26);
-            this.textBox5.TabIndex = 18;
+            this.txbChiPhiTong.Location = new System.Drawing.Point(296, 11);
+            this.txbChiPhiTong.Name = "txbChiPhiTong";
+            this.txbChiPhiTong.Size = new System.Drawing.Size(227, 26);
+            this.txbChiPhiTong.TabIndex = 18;
             // 
             // listView6
             // 
             this.listView6.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader7});
+            this.ChiPhi});
             this.listView6.GridLines = true;
-            this.listView6.Location = new System.Drawing.Point(231, 80);
+            this.listView6.Location = new System.Drawing.Point(21, 80);
             this.listView6.Name = "listView6";
-            this.listView6.Size = new System.Drawing.Size(398, 299);
+            this.listView6.Size = new System.Drawing.Size(608, 299);
             this.listView6.TabIndex = 17;
             this.listView6.UseCompatibleStateImageBehavior = false;
             this.listView6.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader7
+            // ChiPhi
             // 
-            this.columnHeader7.Text = "Chi Phí Phát Sinh";
-            this.columnHeader7.Width = 393;
+            this.ChiPhi.Text = "Chi Phí Phát Sinh";
+            this.ChiPhi.Width = 393;
             // 
-            // comboBox8
+            // cmbChiPhiChiNhanh_Theo
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.cmbChiPhiChiNhanh_Theo.FormattingEnabled = true;
+            this.cmbChiPhiChiNhanh_Theo.Items.AddRange(new object[] {
             "Ngày",
             "Tuần",
             "Tháng",
             "Quí",
             "Năm"});
-            this.comboBox8.Location = new System.Drawing.Point(296, 42);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(56, 26);
-            this.comboBox8.TabIndex = 16;
+            this.cmbChiPhiChiNhanh_Theo.Location = new System.Drawing.Point(383, 42);
+            this.cmbChiPhiChiNhanh_Theo.Name = "cmbChiPhiChiNhanh_Theo";
+            this.cmbChiPhiChiNhanh_Theo.Size = new System.Drawing.Size(56, 26);
+            this.cmbChiPhiChiNhanh_Theo.TabIndex = 16;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(247, 50);
+            this.label15.Location = new System.Drawing.Point(334, 50);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(43, 18);
             this.label15.TabIndex = 15;
             this.label15.Text = "Theo";
-            // 
-            // treeView2
-            // 
-            this.treeView2.Location = new System.Drawing.Point(13, 80);
-            this.treeView2.Name = "treeView2";
-            treeNode12.Name = "Chi Nhánh A1";
-            treeNode12.Text = "A1";
-            treeNode13.Name = "Chi Nhánh A2";
-            treeNode13.Text = "A2";
-            treeNode14.Name = "Chi Nhánh A";
-            treeNode14.Text = "Chi Nhánh A";
-            treeNode15.Name = "Chi Nhánh B";
-            treeNode15.Text = "Chi Nhánh B";
-            treeNode16.Name = "Chi Nhánh C";
-            treeNode16.Text = "Chi Nhánh C";
-            treeNode17.Name = "Chi Nhánh D1";
-            treeNode17.Text = "Chi Nhánh D1";
-            treeNode18.Name = "Chi Nhánh D";
-            treeNode18.Text = "Chi Nhánh D";
-            treeNode19.Name = "Chi Nhánh E1-1";
-            treeNode19.Text = "Chi Nhánh E1-1";
-            treeNode20.Name = "Chi Nhánh E1";
-            treeNode20.Text = "Chi Nhánh E1";
-            treeNode21.Name = "Chi Nhánh E1-2";
-            treeNode21.Text = "Chi Nhánh E1-2";
-            treeNode22.Name = "Chi Nhánh E";
-            treeNode22.Text = "Chi Nhánh E";
-            this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode14,
-            treeNode15,
-            treeNode16,
-            treeNode18,
-            treeNode22});
-            this.treeView2.Size = new System.Drawing.Size(212, 299);
-            this.treeView2.TabIndex = 14;
             // 
             // label16
             // 
@@ -877,19 +781,19 @@
             this.label17.TabIndex = 12;
             this.label17.Text = "Đơn vị : VND";
             // 
-            // comboBox9
+            // cmbChiPhiTong_Theo
             // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
+            this.cmbChiPhiTong_Theo.FormattingEnabled = true;
+            this.cmbChiPhiTong_Theo.Items.AddRange(new object[] {
             "Ngày",
             "Tuần",
             "Tháng",
             "Quí",
             "Năm"});
-            this.comboBox9.Location = new System.Drawing.Point(160, 11);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(65, 26);
-            this.comboBox9.TabIndex = 10;
+            this.cmbChiPhiTong_Theo.Location = new System.Drawing.Point(160, 11);
+            this.cmbChiPhiTong_Theo.Name = "cmbChiPhiTong_Theo";
+            this.cmbChiPhiTong_Theo.Size = new System.Drawing.Size(65, 26);
+            this.cmbChiPhiTong_Theo.TabIndex = 10;
             // 
             // label18
             // 
@@ -904,10 +808,10 @@
             // 
             this.tabPage4.Controls.Add(this.label21);
             this.tabPage4.Controls.Add(this.listView7);
-            this.tabPage4.Controls.Add(this.textBox7);
-            this.tabPage4.Controls.Add(this.textBox6);
-            this.tabPage4.Controls.Add(this.comboBox10);
-            this.tabPage4.Controls.Add(this.comboBox11);
+            this.tabPage4.Controls.Add(this.txbSLMBChiNhanh_Thang);
+            this.tabPage4.Controls.Add(this.txbSLMB_Thang);
+            this.tabPage4.Controls.Add(this.cmbSLMBChiNhanh_Thang);
+            this.tabPage4.Controls.Add(this.cmbSLMB_Thang);
             this.tabPage4.Controls.Add(this.treeView3);
             this.tabPage4.Controls.Add(this.label19);
             this.tabPage4.Controls.Add(this.label20);
@@ -958,24 +862,24 @@
             this.columnHeader11.Text = "SL";
             this.columnHeader11.Width = 130;
             // 
-            // textBox7
+            // txbSLMBChiNhanh_Thang
             // 
-            this.textBox7.Location = new System.Drawing.Point(375, 43);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(96, 26);
-            this.textBox7.TabIndex = 29;
+            this.txbSLMBChiNhanh_Thang.Location = new System.Drawing.Point(375, 43);
+            this.txbSLMBChiNhanh_Thang.Name = "txbSLMBChiNhanh_Thang";
+            this.txbSLMBChiNhanh_Thang.Size = new System.Drawing.Size(96, 26);
+            this.txbSLMBChiNhanh_Thang.TabIndex = 29;
             // 
-            // textBox6
+            // txbSLMB_Thang
             // 
-            this.textBox6.Location = new System.Drawing.Point(375, 10);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(96, 26);
-            this.textBox6.TabIndex = 28;
+            this.txbSLMB_Thang.Location = new System.Drawing.Point(375, 10);
+            this.txbSLMB_Thang.Name = "txbSLMB_Thang";
+            this.txbSLMB_Thang.Size = new System.Drawing.Size(96, 26);
+            this.txbSLMB_Thang.TabIndex = 28;
             // 
-            // comboBox10
+            // cmbSLMBChiNhanh_Thang
             // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
+            this.cmbSLMBChiNhanh_Thang.FormattingEnabled = true;
+            this.cmbSLMBChiNhanh_Thang.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -988,15 +892,15 @@
             "10",
             "11",
             "12"});
-            this.comboBox10.Location = new System.Drawing.Point(327, 43);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(42, 26);
-            this.comboBox10.TabIndex = 27;
+            this.cmbSLMBChiNhanh_Thang.Location = new System.Drawing.Point(327, 43);
+            this.cmbSLMBChiNhanh_Thang.Name = "cmbSLMBChiNhanh_Thang";
+            this.cmbSLMBChiNhanh_Thang.Size = new System.Drawing.Size(42, 26);
+            this.cmbSLMBChiNhanh_Thang.TabIndex = 27;
             // 
-            // comboBox11
+            // cmbSLMB_Thang
             // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
+            this.cmbSLMB_Thang.FormattingEnabled = true;
+            this.cmbSLMB_Thang.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -1009,43 +913,43 @@
             "10",
             "11",
             "12"});
-            this.comboBox11.Location = new System.Drawing.Point(327, 10);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(42, 26);
-            this.comboBox11.TabIndex = 26;
+            this.cmbSLMB_Thang.Location = new System.Drawing.Point(327, 10);
+            this.cmbSLMB_Thang.Name = "cmbSLMB_Thang";
+            this.cmbSLMB_Thang.Size = new System.Drawing.Size(42, 26);
+            this.cmbSLMB_Thang.TabIndex = 26;
             // 
             // treeView3
             // 
             this.treeView3.Location = new System.Drawing.Point(6, 81);
             this.treeView3.Name = "treeView3";
-            treeNode23.Name = "Chi Nhánh A1";
-            treeNode23.Text = "A1";
-            treeNode24.Name = "Chi Nhánh A2";
-            treeNode24.Text = "A2";
-            treeNode25.Name = "Chi Nhánh A";
-            treeNode25.Text = "Chi Nhánh A";
-            treeNode26.Name = "Chi Nhánh B";
-            treeNode26.Text = "Chi Nhánh B";
-            treeNode27.Name = "Chi Nhánh C";
-            treeNode27.Text = "Chi Nhánh C";
-            treeNode28.Name = "Chi Nhánh D1";
-            treeNode28.Text = "Chi Nhánh D1";
-            treeNode29.Name = "Chi Nhánh D";
-            treeNode29.Text = "Chi Nhánh D";
-            treeNode30.Name = "Chi Nhánh E1-1";
-            treeNode30.Text = "Chi Nhánh E1-1";
-            treeNode31.Name = "Chi Nhánh E1";
-            treeNode31.Text = "Chi Nhánh E1";
-            treeNode32.Name = "Chi Nhánh E1-2";
-            treeNode32.Text = "Chi Nhánh E1-2";
-            treeNode33.Name = "Chi Nhánh E";
-            treeNode33.Text = "Chi Nhánh E";
+            treeNode1.Name = "Chi Nhánh A1";
+            treeNode1.Text = "A1";
+            treeNode2.Name = "Chi Nhánh A2";
+            treeNode2.Text = "A2";
+            treeNode3.Name = "Chi Nhánh A";
+            treeNode3.Text = "Chi Nhánh A";
+            treeNode4.Name = "Chi Nhánh B";
+            treeNode4.Text = "Chi Nhánh B";
+            treeNode5.Name = "Chi Nhánh C";
+            treeNode5.Text = "Chi Nhánh C";
+            treeNode6.Name = "Chi Nhánh D1";
+            treeNode6.Text = "Chi Nhánh D1";
+            treeNode7.Name = "Chi Nhánh D";
+            treeNode7.Text = "Chi Nhánh D";
+            treeNode8.Name = "Chi Nhánh E1-1";
+            treeNode8.Text = "Chi Nhánh E1-1";
+            treeNode9.Name = "Chi Nhánh E1";
+            treeNode9.Text = "Chi Nhánh E1";
+            treeNode10.Name = "Chi Nhánh E1-2";
+            treeNode10.Text = "Chi Nhánh E1-2";
+            treeNode11.Name = "Chi Nhánh E";
+            treeNode11.Text = "Chi Nhánh E";
             this.treeView3.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode25,
-            treeNode26,
-            treeNode27,
-            treeNode29,
-            treeNode33});
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode7,
+            treeNode11});
             this.treeView3.Size = new System.Drawing.Size(204, 307);
             this.treeView3.TabIndex = 22;
             // 
@@ -1182,6 +1086,29 @@
             this.QuanLy_TenMonAn_Dgv.Size = new System.Drawing.Size(275, 175);
             this.QuanLy_TenMonAn_Dgv.TabIndex = 10;
             // 
+            // txbChonChiNhanh
+            // 
+            this.txbChonChiNhanh.Location = new System.Drawing.Point(176, 47);
+            this.txbChonChiNhanh.Name = "txbChonChiNhanh";
+            this.txbChonChiNhanh.Size = new System.Drawing.Size(195, 26);
+            this.txbChonChiNhanh.TabIndex = 10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(393, 55);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 18);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Theo";
+            // 
+            // txbChiNhanhChiPhi
+            // 
+            this.txbChiNhanhChiPhi.Location = new System.Drawing.Point(158, 43);
+            this.txbChiNhanhChiPhi.Name = "txbChiNhanhChiPhi";
+            this.txbChiNhanhChiPhi.Size = new System.Drawing.Size(170, 26);
+            this.txbChiNhanhChiPhi.TabIndex = 33;
+            // 
             // QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1261,11 +1188,10 @@
         private System.Windows.Forms.ColumnHeader SLDonHangGiaoDi;
         private System.Windows.Forms.ColumnHeader SLDonHangMangVe;
         private System.Windows.Forms.ColumnHeader SLDonHangTongDai;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.ComboBox cmbDoanhThu2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbDoanhThu1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabControl tabControl2;
@@ -1273,29 +1199,28 @@
         private System.Windows.Forms.ListView listView4;
         private System.Windows.Forms.ColumnHeader NULL;
         private System.Windows.Forms.ColumnHeader SLDonHang_2;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cmbSLDH_Tong_Theo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.ListView listView5;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cmbSLDH_Loai;
+        private System.Windows.Forms.ComboBox cmbSLDH_Loai_Theo;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.ListView listView6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ColumnHeader ChiPhi;
+        private System.Windows.Forms.ComboBox cmbChiPhiChiNhanh_Theo;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TreeView treeView2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox cmbChiPhiTong_Theo;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox cmbSLMBChiNhanh_Thang;
+        private System.Windows.Forms.ComboBox cmbSLMB_Thang;
         private System.Windows.Forms.TreeView treeView3;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
@@ -1305,17 +1230,17 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txbDoanhThu1;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txbChiPhiTong;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ListView listView7;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txbSLMBChiNhanh_Thang;
+        private System.Windows.Forms.TextBox txbSLMB_Thang;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem;
@@ -1324,5 +1249,9 @@
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.DataGridView QuanLy_TenMonAn_Dgv;
+        private System.Windows.Forms.ColumnHeader NTTQN;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txbChonChiNhanh;
+        private System.Windows.Forms.TextBox txbChiNhanhChiPhi;
     }
 }
