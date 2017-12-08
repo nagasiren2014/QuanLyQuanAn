@@ -25,12 +25,8 @@ namespace QuanLyQuanAn
         public static string connectionString = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QuanLyQuanAn_Data;Data Source=DESKTOP-QR067OS";
 
        public static  List<Items> mon = new List<Items>();
-        
-           
-
+    }
 
 }
-
-    }
 
 

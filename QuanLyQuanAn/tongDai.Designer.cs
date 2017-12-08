@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.TongDai_Xoa_Button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -60,8 +59,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DanhSachChiNhanh_Dgv = new System.Windows.Forms.DataGridView();
             this.DanhSachMonAn_dgv = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.danhMucBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TongDai_SearchMonAn_Texbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -73,19 +70,18 @@
             this.TongDai_KH_DiaChi_TextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button6 = new System.Windows.Forms.Button();
+            this.TaoKHMoi_Button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.KhachMoi_Button = new System.Windows.Forms.Button();
+            this.KhachCu_Button = new System.Windows.Forms.Button();
             this.TongDaiTinhThanh_label = new System.Windows.Forms.Label();
             this.TongDai_KH_TinhThanh_TextBox = new System.Windows.Forms.TextBox();
             this.XacNhanKH_Button = new System.Windows.Forms.Button();
             this.LichSuMuaHang_Dgv = new System.Windows.Forms.DataGridView();
-            this.KhachCu_Button = new System.Windows.Forms.Button();
-            this.KhachMoi_Button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachChiNhanh_Dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachMonAn_dgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LichSuMuaHang_Dgv)).BeginInit();
             this.SuspendLayout();
@@ -123,7 +119,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(0, 262);
+            this.label10.Location = new System.Drawing.Point(9, 262);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 18);
             this.label10.TabIndex = 19;
@@ -201,7 +197,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 294);
+            this.label2.Location = new System.Drawing.Point(9, 294);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 18);
             this.label2.TabIndex = 7;
@@ -221,7 +217,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 329);
+            this.label3.Location = new System.Drawing.Point(9, 329);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 18);
             this.label3.TabIndex = 8;
@@ -385,25 +381,10 @@
             this.DanhSachMonAn_dgv.Size = new System.Drawing.Size(272, 223);
             this.DanhSachMonAn_dgv.TabIndex = 46;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.danhMucBindingSource;
-            this.comboBox1.DisplayMember = "MaDanhMuc";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(724, 271);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(256, 21);
-            this.comboBox1.TabIndex = 53;
-            this.comboBox1.ValueMember = "TenDanhMuc";
-            // 
-            // danhMucBindingSource
-            // 
-            this.danhMucBindingSource.DataMember = "DanhMuc";
-            // 
             // TongDai_SearchMonAn_Texbox
             // 
             this.TongDai_SearchMonAn_Texbox.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TongDai_SearchMonAn_Texbox.Location = new System.Drawing.Point(724, 225);
+            this.TongDai_SearchMonAn_Texbox.Location = new System.Drawing.Point(720, 262);
             this.TongDai_SearchMonAn_Texbox.Name = "TongDai_SearchMonAn_Texbox";
             this.TongDai_SearchMonAn_Texbox.Size = new System.Drawing.Size(256, 25);
             this.TongDai_SearchMonAn_Texbox.TabIndex = 52;
@@ -413,7 +394,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(677, 224);
+            this.label1.Location = new System.Drawing.Point(673, 261);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 18);
             this.label1.TabIndex = 51;
@@ -503,15 +484,16 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 34;
             // 
-            // button6
+            // TaoKHMoi_Button
             // 
-            this.button6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(460, 87);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(205, 50);
-            this.button6.TabIndex = 39;
-            this.button6.Text = "Tạo Khách Hàng Mới";
-            this.button6.UseVisualStyleBackColor = true;
+            this.TaoKHMoi_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaoKHMoi_Button.Location = new System.Drawing.Point(460, 87);
+            this.TaoKHMoi_Button.Name = "TaoKHMoi_Button";
+            this.TaoKHMoi_Button.Size = new System.Drawing.Size(205, 50);
+            this.TaoKHMoi_Button.TabIndex = 39;
+            this.TaoKHMoi_Button.Text = "Tạo Khách Hàng Mới";
+            this.TaoKHMoi_Button.UseVisualStyleBackColor = true;
+            this.TaoKHMoi_Button.Click += new System.EventHandler(this.TaoKHMoi_Button_Click);
             // 
             // panel2
             // 
@@ -520,7 +502,7 @@
             this.panel2.Controls.Add(this.TongDaiTinhThanh_label);
             this.panel2.Controls.Add(this.TongDai_KH_TinhThanh_TextBox);
             this.panel2.Controls.Add(this.XacNhanKH_Button);
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.TaoKHMoi_Button);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.TongDai_KH_DiaChi_TextBox);
@@ -534,6 +516,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(687, 187);
             this.panel2.TabIndex = 36;
+            // 
+            // KhachMoi_Button
+            // 
+            this.KhachMoi_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhachMoi_Button.Location = new System.Drawing.Point(334, 91);
+            this.KhachMoi_Button.Name = "KhachMoi_Button";
+            this.KhachMoi_Button.Size = new System.Drawing.Size(94, 46);
+            this.KhachMoi_Button.TabIndex = 44;
+            this.KhachMoi_Button.Text = "Khách Mới";
+            this.KhachMoi_Button.UseVisualStyleBackColor = true;
+            this.KhachMoi_Button.Click += new System.EventHandler(this.KhachMoi_Button_Click);
+            // 
+            // KhachCu_Button
+            // 
+            this.KhachCu_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhachCu_Button.Location = new System.Drawing.Point(334, 19);
+            this.KhachCu_Button.Name = "KhachCu_Button";
+            this.KhachCu_Button.Size = new System.Drawing.Size(94, 46);
+            this.KhachCu_Button.TabIndex = 43;
+            this.KhachCu_Button.Text = "Khách Cũ";
+            this.KhachCu_Button.UseVisualStyleBackColor = true;
+            this.KhachCu_Button.Click += new System.EventHandler(this.KhachCu_Button_Click);
             // 
             // TongDaiTinhThanh_label
             // 
@@ -573,35 +577,12 @@
             this.LichSuMuaHang_Dgv.Size = new System.Drawing.Size(283, 170);
             this.LichSuMuaHang_Dgv.TabIndex = 54;
             // 
-            // KhachCu_Button
-            // 
-            this.KhachCu_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KhachCu_Button.Location = new System.Drawing.Point(334, 19);
-            this.KhachCu_Button.Name = "KhachCu_Button";
-            this.KhachCu_Button.Size = new System.Drawing.Size(94, 46);
-            this.KhachCu_Button.TabIndex = 43;
-            this.KhachCu_Button.Text = "Khách Cũ";
-            this.KhachCu_Button.UseVisualStyleBackColor = true;
-            this.KhachCu_Button.Click += new System.EventHandler(this.KhachCu_Button_Click);
-            // 
-            // KhachMoi_Button
-            // 
-            this.KhachMoi_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KhachMoi_Button.Location = new System.Drawing.Point(334, 91);
-            this.KhachMoi_Button.Name = "KhachMoi_Button";
-            this.KhachMoi_Button.Size = new System.Drawing.Size(94, 46);
-            this.KhachMoi_Button.TabIndex = 44;
-            this.KhachMoi_Button.Text = "Khách Mới";
-            this.KhachMoi_Button.UseVisualStyleBackColor = true;
-            this.KhachMoi_Button.Click += new System.EventHandler(this.KhachMoi_Button_Click);
-            // 
             // tongDai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 634);
             this.Controls.Add(this.LichSuMuaHang_Dgv);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TongDai_SearchMonAn_Texbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DanhSachMonAn_dgv);
@@ -629,7 +610,6 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachChiNhanh_Dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachMonAn_dgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LichSuMuaHang_Dgv)).EndInit();
@@ -670,11 +650,8 @@
         private System.Windows.Forms.ColumnHeader TenMonAn;
         private System.Windows.Forms.ColumnHeader DVT;
         private System.Windows.Forms.ColumnHeader DonGia;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox TongDai_SearchMonAn_Texbox;
         private System.Windows.Forms.Label label1;
-      //  private menu menu;
-        private System.Windows.Forms.BindingSource danhMucBindingSource;
       //  private menuTableAdapters.DanhMucTableAdapter danhMucTableAdapter;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TongDai_KH_SDT_TextBox;
@@ -685,7 +662,7 @@
         private System.Windows.Forms.TextBox TongDai_KH_DiaChi_TextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button TaoKHMoi_Button;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button XacNhanKH_Button;
         private System.Windows.Forms.Label TongDaiTinhThanh_label;

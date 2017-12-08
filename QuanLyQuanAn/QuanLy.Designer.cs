@@ -28,27 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "món 1",
-            "65,000"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "món 2",
-            "59,000"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "món 3",
-            "98,000"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "món 4",
-            "55,000"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
-            "món 5",
-            "105,000"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("món 6");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("món 7");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("món 8");
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("món 9");
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("món 10");
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("");
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("A1");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("A2");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Chi Nhánh A", new System.Windows.Forms.TreeNode[] {
@@ -100,7 +79,7 @@
             System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Chi Nhánh E", new System.Windows.Forms.TreeNode[] {
             treeNode31,
             treeNode32});
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.QuanLy_DanhMucMon_ComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -119,9 +98,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -193,6 +169,7 @@
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.QuanLy_TenMonAn_Dgv = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -206,25 +183,26 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLy_TenMonAn_Dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // QuanLy_DanhMucMon_ComboBox
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.QuanLy_DanhMucMon_ComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.QuanLy_DanhMucMon_ComboBox.FormattingEnabled = true;
+            this.QuanLy_DanhMucMon_ComboBox.Items.AddRange(new object[] {
             "Món Nam",
             "Món Bắc",
             "Món Huế",
             "Món Hàn",
             "Món Trung",
             "Món Pháp"});
-            this.comboBox1.Location = new System.Drawing.Point(136, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(130, 21);
-            this.comboBox1.TabIndex = 0;
+            this.QuanLy_DanhMucMon_ComboBox.Location = new System.Drawing.Point(136, 45);
+            this.QuanLy_DanhMucMon_ComboBox.Name = "QuanLy_DanhMucMon_ComboBox";
+            this.QuanLy_DanhMucMon_ComboBox.Size = new System.Drawing.Size(151, 21);
+            this.QuanLy_DanhMucMon_ComboBox.TabIndex = 0;
             // 
             // label1
             // 
@@ -406,46 +384,6 @@
             this.label2.Size = new System.Drawing.Size(32, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên";
-            // 
-            // listView1
-            // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.listView1.GridLines = true;
-            listViewItem2.Tag = "";
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8,
-            listViewItem9,
-            listViewItem10,
-            listViewItem11});
-            this.listView1.Location = new System.Drawing.Point(12, 82);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(269, 168);
-            this.listView1.TabIndex = 10;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Món";
-            this.columnHeader1.Width = 134;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Đơn giá";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader2.Width = 104;
             // 
             // tabControl1
             // 
@@ -1208,7 +1146,7 @@
             this.đổiMậtKhẩuToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // thôngTinToolStripMenuItem
@@ -1236,6 +1174,14 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // QuanLy_TenMonAn_Dgv
+            // 
+            this.QuanLy_TenMonAn_Dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.QuanLy_TenMonAn_Dgv.Location = new System.Drawing.Point(12, 75);
+            this.QuanLy_TenMonAn_Dgv.Name = "QuanLy_TenMonAn_Dgv";
+            this.QuanLy_TenMonAn_Dgv.Size = new System.Drawing.Size(275, 175);
+            this.QuanLy_TenMonAn_Dgv.TabIndex = 10;
+            // 
             // QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1243,12 +1189,12 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.QuanLy_TenMonAn_Dgv);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.QuanLy_DanhMucMon_ComboBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(1024, 768);
@@ -1279,6 +1225,7 @@
             this.tabPage5.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuanLy_TenMonAn_Dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1286,7 +1233,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox QuanLy_DanhMucMon_ComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1305,9 +1252,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ListView listView2;
@@ -1379,5 +1323,6 @@
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.DataGridView QuanLy_TenMonAn_Dgv;
     }
 }

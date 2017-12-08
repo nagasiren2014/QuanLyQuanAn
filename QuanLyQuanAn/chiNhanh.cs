@@ -318,12 +318,11 @@ namespace QuanLyQuanAn
 
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {
-            if(tbxSearch.Text != "")
-<<<<<<< HEAD
-            bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE  '%{1}%'", tbxSearch.Text,tbxMaCN);
-=======
-            bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE '%{1}%'", tbxSearch.Text, tbxMaCN.Text);
->>>>>>> 69003661a948d09f0ab8c0887a9c0e281b97b756
+            if (tbxSearch.Text != "")
+            {
+                bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE  '%{1}%'", tbxSearch.Text, tbxMaCN);
+                bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE '%{1}%'", tbxSearch.Text, tbxMaCN.Text);
+            }
             else
                 bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);
 
