@@ -51,3 +51,4 @@ E:\github\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.csproj.GenerateResour
 E:\github\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.csproj.CoreCompileInputs.cache
 E:\github\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.exe
 E:\github\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.pdb
+E:\Github\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.createMember.resources
