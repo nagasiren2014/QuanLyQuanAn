@@ -65,15 +65,7 @@ namespace QuanLyQuanAn
 
        
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbxLoaiHoaDon.Text == "Tại chỗ")
-            {
-                soBan.Enabled = true;
-            }
-            else
-                soBan.Enabled = false;
-        }
+        
 
        
 
@@ -306,7 +298,8 @@ namespace QuanLyQuanAn
         {
             if (tbxPhiDichVu.Text == "")
                 tbxPhiDichVu.Text = "0";
-           tbxTongCong.Text =  tongTien().ToString();
+            //tbxTongCong.Text = String.Format(System.Globalization.CultureInfo.CurrentCulture, "{0,15:N0}", tongTien());
+            tbxTongCong.Text = tongTien().ToString();
         }
 
         private void tbxGiamGia_TextChanged(object sender, EventArgs e)
@@ -321,6 +314,10 @@ namespace QuanLyQuanAn
             if (tbxSearch.Text != "")
             {
                 bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE  '%{1}%'", tbxSearch.Text, tbxMaCN);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0d217bea48a85d33a352e15f2b92c8112412cbb7
                 bientoancuc.mn.DefaultView.RowFilter = string.Format("TenMonAn LIKE '%{0}%' AND MaChiNhanh LIKE '%{1}%'", tbxSearch.Text, tbxMaCN.Text);
             }
             else
@@ -344,6 +341,7 @@ namespace QuanLyQuanAn
             donHang["MaBan"] = listView_DSBAN.SelectedItems[0].Text;
             donHang["Loai"] = cbxLoaiHoaDon.Text;
             donHang["TongTienDonHang"] = tbxTongCong.Text;
+            donHang["SDT"] = tbxSDT.Text;
            
             dsDonHang.Rows.Add(donHang);
             xulydulieu.ghiBang("DonHang", dsDonHang);//DonHang
@@ -556,9 +554,13 @@ namespace QuanLyQuanAn
             listView_DSBAN.SelectedItems[0].SubItems[1].Text = "Trống !";
             listView_DSBAN.SelectedItems[0].SubItems[2].Text = "0";
 
-
+            MessageBox.Show("Đã thanh toán !","Écccc",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
+        private void tbxTongCong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
    
 }
