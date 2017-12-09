@@ -28,53 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("A1");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("A2");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Chi Nhánh A", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Chi Nhánh B");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Chi Nhánh C");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Chi Nhánh D1");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Chi Nhánh D", new System.Windows.Forms.TreeNode[] {
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-1");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Chi Nhánh E1", new System.Windows.Forms.TreeNode[] {
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-2");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Chi Nhánh E", new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode10});
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("A1");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("A2");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Chi Nhánh A", new System.Windows.Forms.TreeNode[] {
+            treeNode12,
+            treeNode13});
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Chi Nhánh B");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Chi Nhánh C");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Chi Nhánh D1");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Chi Nhánh D", new System.Windows.Forms.TreeNode[] {
+            treeNode17});
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-1");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Chi Nhánh E1", new System.Windows.Forms.TreeNode[] {
+            treeNode19});
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-2");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Chi Nhánh E", new System.Windows.Forms.TreeNode[] {
+            treeNode20,
+            treeNode21});
             this.QuanLy_DanhMucMon_ComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnTaoChiNhanhMoi = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txb_QuanChiNhanhMoi = new System.Windows.Forms.TextBox();
+            this.txb_DTChiNhanhMoi = new System.Windows.Forms.TextBox();
+            this.txb_DiaChiChiNhanhMoi = new System.Windows.Forms.TextBox();
+            this.txb_TenChiNhanhMoi = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txbChonChiNhanh = new System.Windows.Forms.TextBox();
             this.txbDoanhThu1 = new System.Windows.Forms.TextBox();
             this.listView2 = new System.Windows.Forms.ListView();
+            this.NTTQN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SLDonHang = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TongDoanhThu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SLDonHangTaiCho = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SLDonHangGiaoDi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SLDonHangMangVe = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SLDonHangTongDai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.NTTQN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cmbDoanhThu2 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -98,6 +98,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txbChiNhanhChiPhi = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txbChiPhiTong = new System.Windows.Forms.TextBox();
             this.listView6 = new System.Windows.Forms.ListView();
@@ -134,10 +135,9 @@
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.QuanLy_TenMonAn_Dgv = new System.Windows.Forms.DataGridView();
-            this.txbChonChiNhanh = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txbChiNhanhChiPhi = new System.Windows.Forms.TextBox();
+            this.cmbChiNhanh = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.DSMonAn_dgv = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -151,7 +151,7 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuanLy_TenMonAn_Dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSMonAn_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // QuanLy_DanhMucMon_ComboBox
@@ -160,17 +160,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.QuanLy_DanhMucMon_ComboBox.FormattingEnabled = true;
-            this.QuanLy_DanhMucMon_ComboBox.Items.AddRange(new object[] {
-            "Món Nam",
-            "Món Bắc",
-            "Món Huế",
-            "Món Hàn",
-            "Món Trung",
-            "Món Pháp"});
-            this.QuanLy_DanhMucMon_ComboBox.Location = new System.Drawing.Point(136, 45);
+            this.QuanLy_DanhMucMon_ComboBox.Location = new System.Drawing.Point(137, 75);
             this.QuanLy_DanhMucMon_ComboBox.Name = "QuanLy_DanhMucMon_ComboBox";
             this.QuanLy_DanhMucMon_ComboBox.Size = new System.Drawing.Size(151, 21);
             this.QuanLy_DanhMucMon_ComboBox.TabIndex = 0;
+            this.QuanLy_DanhMucMon_ComboBox.SelectedIndexChanged += new System.EventHandler(this.QuanLy_DanhMucMon_ComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -179,7 +173,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 45);
+            this.label1.Location = new System.Drawing.Point(13, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 18);
             this.label1.TabIndex = 1;
@@ -191,12 +185,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.btnTaoChiNhanhMoi);
             this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -207,60 +197,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TẠO CHI NHÁNH MỚI";
             // 
-            // button3
+            // btnTaoChiNhanhMoi
             // 
-            this.button3.Location = new System.Drawing.Point(559, 133);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 44);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "TẠO";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(459, 133);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 44);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "TẠO MENU";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(311, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 44);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "TẠO DANH MỤC CHO CHI NHÁNH";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(424, 75);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(183, 22);
-            this.textBox4.TabIndex = 4;
+            this.btnTaoChiNhanhMoi.Location = new System.Drawing.Point(420, 111);
+            this.btnTaoChiNhanhMoi.Name = "btnTaoChiNhanhMoi";
+            this.btnTaoChiNhanhMoi.Size = new System.Drawing.Size(273, 44);
+            this.btnTaoChiNhanhMoi.TabIndex = 5;
+            this.btnTaoChiNhanhMoi.Text = "TẠO CHI NHÁNH MỚI  !!!";
+            this.btnTaoChiNhanhMoi.UseVisualStyleBackColor = true;
+            this.btnTaoChiNhanhMoi.Click += new System.EventHandler(this.btnTaoChiNhanhMoi_Click);
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(424, 40);
+            this.numericUpDown1.Location = new System.Drawing.Point(513, 66);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(38, 22);
             this.numericUpDown1.TabIndex = 3;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(331, 78);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 16);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Thông tin bàn";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(331, 42);
+            this.label6.Location = new System.Drawing.Point(420, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 16);
             this.label6.TabIndex = 1;
@@ -269,16 +226,18 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txb_QuanChiNhanhMoi);
+            this.groupBox2.Controls.Add(this.txb_DTChiNhanhMoi);
+            this.groupBox2.Controls.Add(this.txb_DiaChiChiNhanhMoi);
+            this.groupBox2.Controls.Add(this.txb_TenChiNhanhMoi);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(6, 34);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(299, 147);
+            this.groupBox2.Size = new System.Drawing.Size(390, 147);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "THÔNG TIN";
@@ -295,26 +254,42 @@
             this.comboBox2.Size = new System.Drawing.Size(179, 24);
             this.comboBox2.TabIndex = 7;
             // 
-            // textBox3
+            // txb_QuanChiNhanhMoi
             // 
-            this.textBox3.Location = new System.Drawing.Point(100, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(179, 22);
-            this.textBox3.TabIndex = 6;
+            this.txb_QuanChiNhanhMoi.Location = new System.Drawing.Point(100, 116);
+            this.txb_QuanChiNhanhMoi.Name = "txb_QuanChiNhanhMoi";
+            this.txb_QuanChiNhanhMoi.Size = new System.Drawing.Size(284, 22);
+            this.txb_QuanChiNhanhMoi.TabIndex = 6;
             // 
-            // textBox2
+            // txb_DTChiNhanhMoi
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(179, 22);
-            this.textBox2.TabIndex = 5;
+            this.txb_DTChiNhanhMoi.Location = new System.Drawing.Point(100, 88);
+            this.txb_DTChiNhanhMoi.Name = "txb_DTChiNhanhMoi";
+            this.txb_DTChiNhanhMoi.Size = new System.Drawing.Size(284, 22);
+            this.txb_DTChiNhanhMoi.TabIndex = 6;
             // 
-            // textBox1
+            // txb_DiaChiChiNhanhMoi
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 22);
-            this.textBox1.TabIndex = 4;
+            this.txb_DiaChiChiNhanhMoi.Location = new System.Drawing.Point(100, 57);
+            this.txb_DiaChiChiNhanhMoi.Name = "txb_DiaChiChiNhanhMoi";
+            this.txb_DiaChiChiNhanhMoi.Size = new System.Drawing.Size(284, 22);
+            this.txb_DiaChiChiNhanhMoi.TabIndex = 5;
+            // 
+            // txb_TenChiNhanhMoi
+            // 
+            this.txb_TenChiNhanhMoi.Location = new System.Drawing.Point(100, 29);
+            this.txb_TenChiNhanhMoi.Name = "txb_TenChiNhanhMoi";
+            this.txb_TenChiNhanhMoi.Size = new System.Drawing.Size(284, 22);
+            this.txb_TenChiNhanhMoi.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 119);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 16);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Quận";
             // 
             // label5
             // 
@@ -342,7 +317,6 @@
             this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Địa chỉ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -387,6 +361,22 @@
             this.tabPage1.Text = "Doanh Thu";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(393, 55);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 18);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Theo";
+            // 
+            // txbChonChiNhanh
+            // 
+            this.txbChonChiNhanh.Location = new System.Drawing.Point(176, 47);
+            this.txbChonChiNhanh.Name = "txbChonChiNhanh";
+            this.txbChonChiNhanh.Size = new System.Drawing.Size(195, 26);
+            this.txbChonChiNhanh.TabIndex = 10;
+            // 
             // txbDoanhThu1
             // 
             this.txbDoanhThu1.Location = new System.Drawing.Point(283, 14);
@@ -415,6 +405,11 @@
             this.listView2.TabIndex = 8;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // NTTQN
+            // 
+            this.NTTQN.Text = "Ngày/Tuần/Tháng/Qúi/Năm";
+            this.NTTQN.Width = 200;
             // 
             // SLDonHang
             // 
@@ -447,11 +442,6 @@
             // 
             this.SLDonHangTongDai.Text = "SLDH Tổng Đài";
             this.SLDonHangTongDai.Width = 151;
-            // 
-            // NTTQN
-            // 
-            this.NTTQN.Text = "Ngày/Tuần/Tháng/Qúi/Năm";
-            this.NTTQN.Width = 200;
             // 
             // cmbDoanhThu2
             // 
@@ -706,6 +696,13 @@
             this.tabPage3.Text = "Chi Phí";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // txbChiNhanhChiPhi
+            // 
+            this.txbChiNhanhChiPhi.Location = new System.Drawing.Point(158, 43);
+            this.txbChiNhanhChiPhi.Name = "txbChiNhanhChiPhi";
+            this.txbChiNhanhChiPhi.Size = new System.Drawing.Size(170, 26);
+            this.txbChiNhanhChiPhi.TabIndex = 33;
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -922,34 +919,34 @@
             // 
             this.treeView3.Location = new System.Drawing.Point(6, 81);
             this.treeView3.Name = "treeView3";
-            treeNode1.Name = "Chi Nhánh A1";
-            treeNode1.Text = "A1";
-            treeNode2.Name = "Chi Nhánh A2";
-            treeNode2.Text = "A2";
-            treeNode3.Name = "Chi Nhánh A";
-            treeNode3.Text = "Chi Nhánh A";
-            treeNode4.Name = "Chi Nhánh B";
-            treeNode4.Text = "Chi Nhánh B";
-            treeNode5.Name = "Chi Nhánh C";
-            treeNode5.Text = "Chi Nhánh C";
-            treeNode6.Name = "Chi Nhánh D1";
-            treeNode6.Text = "Chi Nhánh D1";
-            treeNode7.Name = "Chi Nhánh D";
-            treeNode7.Text = "Chi Nhánh D";
-            treeNode8.Name = "Chi Nhánh E1-1";
-            treeNode8.Text = "Chi Nhánh E1-1";
-            treeNode9.Name = "Chi Nhánh E1";
-            treeNode9.Text = "Chi Nhánh E1";
-            treeNode10.Name = "Chi Nhánh E1-2";
-            treeNode10.Text = "Chi Nhánh E1-2";
-            treeNode11.Name = "Chi Nhánh E";
-            treeNode11.Text = "Chi Nhánh E";
+            treeNode12.Name = "Chi Nhánh A1";
+            treeNode12.Text = "A1";
+            treeNode13.Name = "Chi Nhánh A2";
+            treeNode13.Text = "A2";
+            treeNode14.Name = "Chi Nhánh A";
+            treeNode14.Text = "Chi Nhánh A";
+            treeNode15.Name = "Chi Nhánh B";
+            treeNode15.Text = "Chi Nhánh B";
+            treeNode16.Name = "Chi Nhánh C";
+            treeNode16.Text = "Chi Nhánh C";
+            treeNode17.Name = "Chi Nhánh D1";
+            treeNode17.Text = "Chi Nhánh D1";
+            treeNode18.Name = "Chi Nhánh D";
+            treeNode18.Text = "Chi Nhánh D";
+            treeNode19.Name = "Chi Nhánh E1-1";
+            treeNode19.Text = "Chi Nhánh E1-1";
+            treeNode20.Name = "Chi Nhánh E1";
+            treeNode20.Text = "Chi Nhánh E1";
+            treeNode21.Name = "Chi Nhánh E1-2";
+            treeNode21.Text = "Chi Nhánh E1-2";
+            treeNode22.Name = "Chi Nhánh E";
+            treeNode22.Text = "Chi Nhánh E";
             this.treeView3.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode7,
-            treeNode11});
+            treeNode14,
+            treeNode15,
+            treeNode16,
+            treeNode18,
+            treeNode22});
             this.treeView3.Size = new System.Drawing.Size(204, 307);
             this.treeView3.TabIndex = 22;
             // 
@@ -1078,36 +1075,37 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // QuanLy_TenMonAn_Dgv
+            // cmbChiNhanh
             // 
-            this.QuanLy_TenMonAn_Dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.QuanLy_TenMonAn_Dgv.Location = new System.Drawing.Point(12, 75);
-            this.QuanLy_TenMonAn_Dgv.Name = "QuanLy_TenMonAn_Dgv";
-            this.QuanLy_TenMonAn_Dgv.Size = new System.Drawing.Size(275, 175);
-            this.QuanLy_TenMonAn_Dgv.TabIndex = 10;
+            this.cmbChiNhanh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbChiNhanh.FormattingEnabled = true;
+            this.cmbChiNhanh.Location = new System.Drawing.Point(137, 48);
+            this.cmbChiNhanh.Name = "cmbChiNhanh";
+            this.cmbChiNhanh.Size = new System.Drawing.Size(151, 21);
+            this.cmbChiNhanh.TabIndex = 0;
+            this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
             // 
-            // txbChonChiNhanh
+            // label25
             // 
-            this.txbChonChiNhanh.Location = new System.Drawing.Point(176, 47);
-            this.txbChonChiNhanh.Name = "txbChonChiNhanh";
-            this.txbChonChiNhanh.Size = new System.Drawing.Size(195, 26);
-            this.txbChonChiNhanh.TabIndex = 10;
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(13, 48);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(85, 18);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Chi Nhánh: ";
             // 
-            // label8
+            // DSMonAn_dgv
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(393, 55);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 18);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Theo";
-            // 
-            // txbChiNhanhChiPhi
-            // 
-            this.txbChiNhanhChiPhi.Location = new System.Drawing.Point(158, 43);
-            this.txbChiNhanhChiPhi.Name = "txbChiNhanhChiPhi";
-            this.txbChiNhanhChiPhi.Size = new System.Drawing.Size(170, 26);
-            this.txbChiNhanhChiPhi.TabIndex = 33;
+            this.DSMonAn_dgv.Location = new System.Drawing.Point(16, 102);
+            this.DSMonAn_dgv.Name = "DSMonAn_dgv";
+            this.DSMonAn_dgv.Size = new System.Drawing.Size(272, 148);
+            this.DSMonAn_dgv.TabIndex = 12;
             // 
             // QuanLy
             // 
@@ -1116,10 +1114,12 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.QuanLy_TenMonAn_Dgv);
+            this.Controls.Add(this.DSMonAn_dgv);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.cmbChiNhanh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.QuanLy_DanhMucMon_ComboBox);
             this.Controls.Add(this.menuStrip1);
@@ -1152,7 +1152,7 @@
             this.tabPage5.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.QuanLy_TenMonAn_Dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSMonAn_dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1168,17 +1168,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btnTaoChiNhanhMoi;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txb_DTChiNhanhMoi;
+        private System.Windows.Forms.TextBox txb_DiaChiChiNhanhMoi;
+        private System.Windows.Forms.TextBox txb_TenChiNhanhMoi;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ListView listView2;
@@ -1248,10 +1244,14 @@
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.DataGridView QuanLy_TenMonAn_Dgv;
         private System.Windows.Forms.ColumnHeader NTTQN;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbChonChiNhanh;
         private System.Windows.Forms.TextBox txbChiNhanhChiPhi;
+        private System.Windows.Forms.ComboBox cmbChiNhanh;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DataGridView DSMonAn_dgv;
+        private System.Windows.Forms.TextBox txb_QuanChiNhanhMoi;
+        private System.Windows.Forms.Label label7;
     }
 }

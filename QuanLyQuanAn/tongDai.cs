@@ -421,11 +421,7 @@ namespace QuanLyQuanAn
             xulydulieu.ghiBang("DonHang", dsDonHang);
             MessageBox.Show("Đã Thanh Toán");
             MaHoaDon_Label.Text = "DH" + (mdh + 1).ToString();
-            //            HoaDon_ListView.Clear();
-            while (HoaDon_ListView.Items.Count > 0)
-            {
-            //    HoaDon_ListView.Items.Clear();
-            }
+
         }
     }
 }
