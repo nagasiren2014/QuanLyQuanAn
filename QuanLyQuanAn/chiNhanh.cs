@@ -233,19 +233,21 @@ namespace QuanLyQuanAn
 
         private void chiNhanh_Load(object sender, EventArgs e)
         {
+            tbxMaNV.Text = bientoancuc.MaNV;
+            tbxMaCN.Text = bientoancuc.MaCN;
+            tbxTenNV.Text = bientoancuc.TenNhanVien;
+
             dsDonHang = xulydulieu.docBang("Select * From DonHang");
             mdh = dsDonHang.Rows.Count + 1;
             lb_maDH.Text = "DH" + (mdh).ToString();
 
+           
             bientoancuc.mn = xulydulieu.docBang("Select * From MonAn");
-            dgvMenu.DataSource = bientoancuc.mn;
-
-            tbxMaNV.Text = bientoancuc.MaNV;
-            tbxMaCN.Text = bientoancuc.MaCN;
-            tbxTenNV.Text = bientoancuc.TenNhanVien;
+                dgvMenu.DataSource = bientoancuc.mn;
             bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);///////////////Load !
             dsBan = xulydulieu.docBang("Select * From Ban WHERE MaChiNhanh LIKE '%" + bientoancuc.MaCN + "%'");
             ban_cost = xulydulieu.docBang("Select * from TongTien");
+
 
 
 
@@ -482,11 +484,9 @@ namespace QuanLyQuanAn
             dt_ban++;
         }
 
-        private void listView_DSBAN_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
+       
 
-        }
-
+        
         private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
