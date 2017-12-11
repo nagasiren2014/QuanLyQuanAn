@@ -85,6 +85,18 @@
     <Compile Include="QuanLy.Designer.cs">
       <DependentUpon>QuanLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaoChiNhanhMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoChiNhanhMoi.Designer.cs">
+      <DependentUpon>TaoChiNhanhMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaoMonAnMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoMonAnMoi.Designer.cs">
+      <DependentUpon>TaoMonAnMoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="tongDai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,12 +137,32 @@
     <EmbeddedResource Include="QuanLy.resx">
       <DependentUpon>QuanLy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TaoChiNhanhMoi.resx">
+      <DependentUpon>TaoChiNhanhMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoMonAnMoi.resx">
+      <DependentUpon>TaoMonAnMoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="tongDai.resx">
       <DependentUpon>tongDai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="xemHoaDon.resx">
       <DependentUpon>xemHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\addChiPhiPhatSinh.datasource" />
+    <None Include="Properties\DataSources\bientoancuc.datasource" />
+    <None Include="Properties\DataSources\chiNhanh.datasource" />
+    <None Include="Properties\DataSources\createMember.datasource" />
+    <None Include="Properties\DataSources\DangNhap.datasource" />
+    <None Include="Properties\DataSources\doiMK.datasource" />
+    <None Include="Properties\DataSources\Items.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\QuanLy.datasource" />
+    <None Include="Properties\DataSources\QuanLyQuanAn.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\QuanLyQuanAn.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\tongDai.datasource" />
+    <None Include="Properties\DataSources\xemHoaDon.datasource" />
+    <None Include="Properties\DataSources\xulydulieu.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
