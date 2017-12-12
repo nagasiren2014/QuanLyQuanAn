@@ -30,6 +30,12 @@
         {
             this.TongDai_Xoa_Button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.HoaDon_ListView = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaHoaDon_Label = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.TextBoxChiNhanh = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -43,7 +49,6 @@
             this.TongDai_Bot_Button = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.TongDai_Them_button = new System.Windows.Forms.Button();
-            this.TongDai_Huy_Button = new System.Windows.Forms.Button();
             this.TongDai_XacNhan_Button = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.TongDai_ChonChiNhanh_Button = new System.Windows.Forms.Button();
@@ -74,12 +79,6 @@
             this.TongDai_KH_TinhThanh_TextBox = new System.Windows.Forms.TextBox();
             this.XacNhanKH_Button = new System.Windows.Forms.Button();
             this.LichSuMuaHang_Dgv = new System.Windows.Forms.DataGridView();
-            this.MaHoaDon_Label = new System.Windows.Forms.Label();
-            this.HoaDon_ListView = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Btn_ThanhToan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -92,7 +91,7 @@
             // TongDai_Xoa_Button
             // 
             this.TongDai_Xoa_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TongDai_Xoa_Button.Location = new System.Drawing.Point(639, 386);
+            this.TongDai_Xoa_Button.Location = new System.Drawing.Point(639, 380);
             this.TongDai_Xoa_Button.Name = "TongDai_Xoa_Button";
             this.TongDai_Xoa_Button.Size = new System.Drawing.Size(75, 31);
             this.TongDai_Xoa_Button.TabIndex = 34;
@@ -118,6 +117,49 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(322, 416);
             this.panel1.TabIndex = 32;
+            // 
+            // HoaDon_ListView
+            // 
+            this.HoaDon_ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.HoaDon_ListView.FullRowSelect = true;
+            this.HoaDon_ListView.GridLines = true;
+            this.HoaDon_ListView.Location = new System.Drawing.Point(6, 49);
+            this.HoaDon_ListView.Name = "HoaDon_ListView";
+            this.HoaDon_ListView.Size = new System.Drawing.Size(314, 226);
+            this.HoaDon_ListView.TabIndex = 22;
+            this.HoaDon_ListView.UseCompatibleStateImageBehavior = false;
+            this.HoaDon_ListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Món";
+            this.columnHeader4.Width = 129;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "SL";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "ĐVT";
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Giá";
+            // 
+            // MaHoaDon_Label
+            // 
+            this.MaHoaDon_Label.AutoSize = true;
+            this.MaHoaDon_Label.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaHoaDon_Label.Location = new System.Drawing.Point(9, 30);
+            this.MaHoaDon_Label.Name = "MaHoaDon_Label";
+            this.MaHoaDon_Label.Size = new System.Drawing.Size(24, 16);
+            this.MaHoaDon_Label.TabIndex = 21;
+            this.MaHoaDon_Label.Text = "HD";
             // 
             // label10
             // 
@@ -220,7 +262,7 @@
             // TongDai_Bot_Button
             // 
             this.TongDai_Bot_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TongDai_Bot_Button.Location = new System.Drawing.Point(639, 349);
+            this.TongDai_Bot_Button.Location = new System.Drawing.Point(639, 343);
             this.TongDai_Bot_Button.Name = "TongDai_Bot_Button";
             this.TongDai_Bot_Button.Size = new System.Drawing.Size(75, 31);
             this.TongDai_Bot_Button.TabIndex = 31;
@@ -249,20 +291,10 @@
             this.TongDai_Them_button.UseVisualStyleBackColor = true;
             this.TongDai_Them_button.Click += new System.EventHandler(this.TongDai_Them_button_Click);
             // 
-            // TongDai_Huy_Button
-            // 
-            this.TongDai_Huy_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TongDai_Huy_Button.Location = new System.Drawing.Point(639, 566);
-            this.TongDai_Huy_Button.Name = "TongDai_Huy_Button";
-            this.TongDai_Huy_Button.Size = new System.Drawing.Size(75, 52);
-            this.TongDai_Huy_Button.TabIndex = 40;
-            this.TongDai_Huy_Button.Text = "Huỷ";
-            this.TongDai_Huy_Button.UseVisualStyleBackColor = true;
-            // 
             // TongDai_XacNhan_Button
             // 
             this.TongDai_XacNhan_Button.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TongDai_XacNhan_Button.Location = new System.Drawing.Point(639, 426);
+            this.TongDai_XacNhan_Button.Location = new System.Drawing.Point(639, 417);
             this.TongDai_XacNhan_Button.Name = "TongDai_XacNhan_Button";
             this.TongDai_XacNhan_Button.Size = new System.Drawing.Size(75, 59);
             this.TongDai_XacNhan_Button.TabIndex = 39;
@@ -520,9 +552,9 @@
             this.TongDaiTinhThanh_label.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TongDaiTinhThanh_label.Location = new System.Drawing.Point(3, 121);
             this.TongDaiTinhThanh_label.Name = "TongDaiTinhThanh_label";
-            this.TongDaiTinhThanh_label.Size = new System.Drawing.Size(87, 18);
+            this.TongDaiTinhThanh_label.Size = new System.Drawing.Size(49, 18);
             this.TongDaiTinhThanh_label.TabIndex = 42;
-            this.TongDaiTinhThanh_label.Text = "Tỉnh Thành:";
+            this.TongDaiTinhThanh_label.Text = "Quận:";
             // 
             // TongDai_KH_TinhThanh_TextBox
             // 
@@ -552,53 +584,10 @@
             this.LichSuMuaHang_Dgv.Size = new System.Drawing.Size(283, 170);
             this.LichSuMuaHang_Dgv.TabIndex = 54;
             // 
-            // MaHoaDon_Label
-            // 
-            this.MaHoaDon_Label.AutoSize = true;
-            this.MaHoaDon_Label.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaHoaDon_Label.Location = new System.Drawing.Point(9, 30);
-            this.MaHoaDon_Label.Name = "MaHoaDon_Label";
-            this.MaHoaDon_Label.Size = new System.Drawing.Size(24, 16);
-            this.MaHoaDon_Label.TabIndex = 21;
-            this.MaHoaDon_Label.Text = "HD";
-            // 
-            // HoaDon_ListView
-            // 
-            this.HoaDon_ListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10});
-            this.HoaDon_ListView.FullRowSelect = true;
-            this.HoaDon_ListView.GridLines = true;
-            this.HoaDon_ListView.Location = new System.Drawing.Point(6, 49);
-            this.HoaDon_ListView.Name = "HoaDon_ListView";
-            this.HoaDon_ListView.Size = new System.Drawing.Size(314, 226);
-            this.HoaDon_ListView.TabIndex = 22;
-            this.HoaDon_ListView.UseCompatibleStateImageBehavior = false;
-            this.HoaDon_ListView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Món";
-            this.columnHeader4.Width = 129;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "SL";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "ĐVT";
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Giá";
-            // 
             // Btn_ThanhToan
             // 
             this.Btn_ThanhToan.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ThanhToan.Location = new System.Drawing.Point(639, 491);
+            this.Btn_ThanhToan.Location = new System.Drawing.Point(639, 482);
             this.Btn_ThanhToan.Name = "Btn_ThanhToan";
             this.Btn_ThanhToan.Size = new System.Drawing.Size(75, 59);
             this.Btn_ThanhToan.TabIndex = 39;
@@ -618,7 +607,6 @@
             this.Controls.Add(this.DanhSachChiNhanh_Dgv);
             this.Controls.Add(this.TongDai_ChonChiNhanh_Button);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.TongDai_Huy_Button);
             this.Controls.Add(this.Btn_ThanhToan);
             this.Controls.Add(this.TongDai_XacNhan_Button);
             this.Controls.Add(this.TongDai_Them_button);
@@ -664,7 +652,6 @@
         private System.Windows.Forms.TextBox TextBoxChiNhanh;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button TongDai_Them_button;
-        private System.Windows.Forms.Button TongDai_Huy_Button;
         private System.Windows.Forms.Button TongDai_XacNhan_Button;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button TongDai_ChonChiNhanh_Button;

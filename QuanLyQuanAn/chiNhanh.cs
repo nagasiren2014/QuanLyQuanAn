@@ -39,10 +39,18 @@ namespace QuanLyQuanAn
             {
                 string s = x.Rows[i]["MaBan"].ToString();
                 int k = 1;
-                while (k < s.Length)
+                if (s[0] == 'T')
                 {
-                    kq = kq * 10 + int.Parse(s[k].ToString());
-                    k++;
+                    i++;
+                    kq++;
+                }
+                else
+                {
+                    while (k < s.Length)
+                    {
+                        kq = kq * 10 + int.Parse(s[k].ToString());
+                        k++;
+                    }
                 }
                 if (kq > max)
                 {
@@ -241,9 +249,9 @@ namespace QuanLyQuanAn
             mdh = dsDonHang.Rows.Count + 1;
             lb_maDH.Text = "DH" + (mdh).ToString();
 
-           
+
             bientoancuc.mn = xulydulieu.docBang("Select * From MonAn");
-                dgvMenu.DataSource = bientoancuc.mn;
+            dgvMenu.DataSource = bientoancuc.mn;
             bientoancuc.mn.DefaultView.RowFilter = string.Format("MaChiNhanh LIKE '%{0}%'", tbxMaCN.Text);///////////////Load !
             dsBan = xulydulieu.docBang("Select * From Ban WHERE MaChiNhanh LIKE '%" + bientoancuc.MaCN + "%'");
             ban_cost = xulydulieu.docBang("Select * from TongTien");
@@ -351,7 +359,7 @@ namespace QuanLyQuanAn
                     lsmh["TongHoaDon"] = tbxTongCong.Text;
                     lsmh["SDT"] = tbxSDT.Text;
                     lichSuMuaHang.Rows.Add(lsmh);
-                    xulydulieu.ghiBang("LichSuMuaHang",lichSuMuaHang);
+                    xulydulieu.ghiBang("LichSuMuaHang", lichSuMuaHang);
                 }
                 dsDonHang.Rows.Add(donHang);
                 xulydulieu.ghiBang("DonHang", dsDonHang);//DonHang
@@ -444,7 +452,7 @@ namespace QuanLyQuanAn
                         }
                     }
                 }
-                
+
 
                 lb_maDH.Text = "DH" + (mdh + 1).ToString();
 
@@ -484,9 +492,9 @@ namespace QuanLyQuanAn
             dt_ban++;
         }
 
-       
 
-        
+
+
         private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -495,6 +503,7 @@ namespace QuanLyQuanAn
         private void button1_Click(object sender, EventArgs e)
         {
             dsBanFull = xulydulieu.docBang("Select * From Ban");
+            donHangChiTiet = xulydulieu.docBang("Select * From DonHangChiTiet");
             if (listView_DSBAN.SelectedItems[0].SubItems[2].Text != "0")
             {
                 MessageBox.Show("Bàn " + listView_DSBAN.SelectedItems[0].Text + " chưa thanh toán, không thể xoá !");
@@ -503,6 +512,29 @@ namespace QuanLyQuanAn
             {
                 while (listView_DSBAN.SelectedItems.Count > 0)
                 {
+
+
+                    for (int i = 0; i < dsDonHang.Rows.Count; i++)
+                    {
+                        if (dsDonHang.Rows[i]["MaBan"].ToString() == listView_DSBAN.SelectedItems[0].Text)
+                        {
+                            for (int j = 0; j < donHangChiTiet.Rows.Count; j++)
+                            {
+                                if (donHangChiTiet.Rows[j]["MaDonHang"].ToString() == dsDonHang.Rows[i]["MaDonHang"].ToString())
+                                {
+                                    donHangChiTiet.Rows[j].Delete();
+                                    break;
+                                }
+                            }
+
+                            xulydulieu.ghiBang("DonHangChiTiet", donHangChiTiet);
+                            dsDonHang.Rows[i].Delete();
+                            break;
+                        }
+                    }
+
+                    xulydulieu.ghiBang("DonHang", dsDonHang);
+
 
                     for (int i = 0; i < dsBanFull.Rows.Count; i++)
                     {

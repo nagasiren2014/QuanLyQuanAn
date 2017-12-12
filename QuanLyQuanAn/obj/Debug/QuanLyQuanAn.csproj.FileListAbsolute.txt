@@ -57,3 +57,22 @@ E:\Github\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.createMember.resource
 >>>>>>> 4569cbf31e99607ba1a297a545b91cf53b17de8b
 E:\Github\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.TaoChiNhanhMoi.resources
 E:\Github\QuanLyQuanAn\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.TaoMonAnMoi.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\bin\Debug\QuanLyQuanAn.exe.config
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\bin\Debug\QuanLyQuanAn.exe
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\bin\Debug\QuanLyQuanAn.pdb
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.csprojResolveAssemblyReference.cache
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.addChiPhiPhatSinh.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.chiNhanh.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.createMember.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.doiMK.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.DangNhap.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.Properties.Resources.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.QuanLy.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.TaoChiNhanhMoi.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.TaoMonAnMoi.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.tongDai.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.xemHoaDon.resources
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.csproj.GenerateResource.Cache
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.csproj.CoreCompileInputs.cache
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.exe
+C:\Users\ntt\Desktop\New folder\QuanLyQuanAn\obj\Debug\QuanLyQuanAn.pdb
