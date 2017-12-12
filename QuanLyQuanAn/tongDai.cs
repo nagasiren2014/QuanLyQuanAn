@@ -359,51 +359,67 @@ namespace QuanLyQuanAn
         private void TongDai_XacNhan_Button_Click(object sender, EventArgs e)
         {
             ghiListHoaDon();
-
-            DataRow donHang = dsDonHang.NewRow();
-            donHang["MaDonHang"] = MaHoaDon_Label.Text;
-            donHang["MaChiNhanh"] = TextBoxChiNhanh.Text;
-            donHang["ThoiDiem"] = dtp.Value.ToString("yyyy/MM/dd HH:mm:ss");
-            donHang["TrangThai"] = "Chưa thanh toán !";
-            string str = TextBoxChiNhanh.Text.Substring(2);
-                donHang["MaBan"] = "TD"+str;
-            donHang["Loai"] = "TongDai";
-            donHang["TongTienDonHang"] = Textbox_TongCong.Text;
-            donHang["SDT"] = TongDai_KH_SDT_TextBox.Text;
-
-            dsDonHang.Rows.Add(donHang);
-            xulydulieu.ghiBang("DonHang", dsDonHang);//DonHang
-
-            dsDonHangChiTiet = xulydulieu.docBang("Select * From DonHangChiTiet");
-
-            for (int k = 0; k < bientoancuc.mon.Count; k++)
+            try
             {
-                DataRow dhct = dsDonHangChiTiet.NewRow();
-                dhct["MaDonHang"] = MaHoaDon_Label.Text;
-                dhct["TenMonAn"] = bientoancuc.mon[k].xuatTen();
-                dhct["SoLuong"] = bientoancuc.mon[k].xuatSL();
-                dsDonHangChiTiet.Rows.Add(dhct);
+                DataRow donHang = dsDonHang.NewRow();
+                donHang["MaDonHang"] = MaHoaDon_Label.Text;
+                donHang["MaChiNhanh"] = TextBoxChiNhanh.Text;
+                donHang["ThoiDiem"] = dtp.Value.ToString("yyyy/MM/dd HH:mm:ss");
+                donHang["TrangThai"] = "Chưa thanh toán !";
+                string str = TextBoxChiNhanh.Text.Substring(2);
+                donHang["MaBan"] = "TD" + str;
+                donHang["Loai"] = "TongDai";
+                donHang["TongTienDonHang"] = Textbox_TongCong.Text;
+                donHang["SDT"] = TongDai_KH_SDT_TextBox.Text;
+
+                dsDonHang.Rows.Add(donHang);
+                xulydulieu.ghiBang("DonHang", dsDonHang);//DonHang
+
+                dsDonHangChiTiet = xulydulieu.docBang("Select * From DonHangChiTiet");
+
+                for (int k = 0; k < bientoancuc.mon.Count; k++)
+                {
+                    DataRow dhct = dsDonHangChiTiet.NewRow();
+                    dhct["MaDonHang"] = MaHoaDon_Label.Text;
+                    dhct["TenMonAn"] = bientoancuc.mon[k].xuatTen();
+                    dhct["SoLuong"] = bientoancuc.mon[k].xuatSL();
+                    dsDonHangChiTiet.Rows.Add(dhct);
+                }
+                xulydulieu.ghiBang("DonHangChiTiet", dsDonHangChiTiet);
+
+
+                if (HoaDon_ListView.Items.Count == 0)
+                {
+                    MessageBox.Show("Chưa chọn món !");
+                }
+                else
+                {
+                    xemHoaDon hd = new xemHoaDon();
+                    hd.ShowDialog();
+                }
+                DataTable lichSuMuaHang = xulydulieu.docBang("Select * From LichSuMuaHang");
+                DataRow lsmh = lichSuMuaHang.NewRow();
+                lsmh["ThoiGian"] = dtp.Value.ToString("yyyy/MM/dd HH:mm:ss");
+                lsmh["TongHoaDon"] = Textbox_TongCong.Text;
+                lsmh["SDT"] = TongDai_KH_SDT_TextBox.Text;
+                lichSuMuaHang.Rows.Add(lsmh);
+                xulydulieu.ghiBang("LichSuMuaHang", lichSuMuaHang);
             }
-            xulydulieu.ghiBang("DonHangChiTiet", dsDonHangChiTiet);
-
-
-            if (HoaDon_ListView.Items.Count == 0)
+            catch
             {
-                MessageBox.Show("Chưa chọn món !");
+                if (TextBoxChiNhanh.Text == "" && TongDai_KH_SDT_TextBox.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa chọn chi nhánh và chưa nhâp thông tin khách hàng kìa !");
+                }
+                else
+                {
+                    if (TongDai_KH_SDT_TextBox.Text == "")
+                        MessageBox.Show("Bạn chưa nhập thông tin SDT khách hàng kìa !");
+                    else
+                        if(TextBoxChiNhanh.Text == "")
+                            MessageBox.Show("Bạn chưa chọn chi nhánh kìa !");
+                }
             }
-            else
-            {
-                xemHoaDon hd = new xemHoaDon();
-                hd.ShowDialog();
-            }
-            DataTable lichSuMuaHang = xulydulieu.docBang("Select * From LichSuMuaHang");
-            DataRow lsmh = lichSuMuaHang.NewRow();
-            lsmh["ThoiGian"] = dtp.Value.ToString("yyyy/MM/dd HH:mm:ss");
-            lsmh["TongHoaDon"] = Textbox_TongCong.Text;
-            lsmh["SDT"] = TongDai_KH_SDT_TextBox.Text;
-            lichSuMuaHang.Rows.Add(lsmh);
-            xulydulieu.ghiBang("LichSuMuaHang", lichSuMuaHang);
-
         }
 
         private void Btn_ThanhToan_Click(object sender, EventArgs e)

@@ -47,24 +47,6 @@ namespace QuanLyQuanAn
 
         }
 
-        private void cmbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ComboBox cmb = sender as ComboBox;
-            machinhanh = cmb.Text;
-            dsDanhMuc = xulydulieu.docBang("select * from DanhMuc where MaChiNhanh like '" + machinhanh + "'");
-            QuanLy_DanhMucMon_ComboBox.DataSource = dsDanhMuc;
-            QuanLy_DanhMucMon_ComboBox.DisplayMember = "TenDanhMuc";
-
-        }
-
-        private void QuanLy_DanhMucMon_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ComboBox cmb = sender as ComboBox;
-            madanhmuc = cmb.Text;
-
-
-
-        }
         private void LoadListViewMonAn()
         {
             bientoancuc.BangMonAn2 = xulydulieu.docBang("select MaMonAn,TenMonAn,DonGia from MonAn where MonAn.MaChiNhanh like'%" + machinhanh + "%'" + "and MonAn.MaDanhMuc like '%" + madanhmuc + "%'");
@@ -90,6 +72,22 @@ namespace QuanLyQuanAn
             MessageBox.Show("Tạo Chi Nhánh mới: "+ bientoancuc.TenCNmoi+"\nSDT: "+ bientoancuc.SDTCNmoi + "\nĐịa chỉ: "+ bientoancuc.DiachiCNmoi + "\nQuận: "+ bientoancuc.QuanCNmoi);
 
             TaoChiNhanh();
+        }
+
+        private void cmbChiNhanh_SelectedValueChanged(object sender, EventArgs e)
+        {
+            ComboBox cmb = sender as ComboBox;
+            machinhanh = cmb.Text;
+            dsDanhMuc = xulydulieu.docBang("select * from DanhMuc where MaChiNhanh like '" + machinhanh + "'");
+            QuanLy_DanhMucMon_ComboBox.DataSource = dsDanhMuc;
+            QuanLy_DanhMucMon_ComboBox.DisplayMember = "TenDanhMuc";
+        }
+
+        private void QuanLy_DanhMucMon_ComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            ComboBox cmb = sender as ComboBox;
+            madanhmuc = cmb.Text;
+
         }
     }
 }

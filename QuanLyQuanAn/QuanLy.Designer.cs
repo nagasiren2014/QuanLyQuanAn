@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("A1");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("A2");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Chi Nhánh A", new System.Windows.Forms.TreeNode[] {
-            treeNode12,
-            treeNode13});
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Chi Nhánh B");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Chi Nhánh C");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Chi Nhánh D1");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Chi Nhánh D", new System.Windows.Forms.TreeNode[] {
-            treeNode17});
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-1");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Chi Nhánh E1", new System.Windows.Forms.TreeNode[] {
-            treeNode19});
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-2");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Chi Nhánh E", new System.Windows.Forms.TreeNode[] {
-            treeNode20,
-            treeNode21});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("A1");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("A2");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Chi Nhánh A", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Chi Nhánh B");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Chi Nhánh C");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Chi Nhánh D1");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Chi Nhánh D", new System.Windows.Forms.TreeNode[] {
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-1");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Chi Nhánh E1", new System.Windows.Forms.TreeNode[] {
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Chi Nhánh E1-2");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Chi Nhánh E", new System.Windows.Forms.TreeNode[] {
+            treeNode9,
+            treeNode10});
             this.QuanLy_DanhMucMon_ComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -164,7 +164,7 @@
             this.QuanLy_DanhMucMon_ComboBox.Name = "QuanLy_DanhMucMon_ComboBox";
             this.QuanLy_DanhMucMon_ComboBox.Size = new System.Drawing.Size(151, 21);
             this.QuanLy_DanhMucMon_ComboBox.TabIndex = 0;
-            this.QuanLy_DanhMucMon_ComboBox.SelectedIndexChanged += new System.EventHandler(this.QuanLy_DanhMucMon_ComboBox_SelectedIndexChanged);
+            this.QuanLy_DanhMucMon_ComboBox.SelectedValueChanged += new System.EventHandler(this.QuanLy_DanhMucMon_ComboBox_SelectedValueChanged);
             // 
             // label1
             // 
@@ -919,34 +919,34 @@
             // 
             this.treeView3.Location = new System.Drawing.Point(6, 81);
             this.treeView3.Name = "treeView3";
-            treeNode12.Name = "Chi Nhánh A1";
-            treeNode12.Text = "A1";
-            treeNode13.Name = "Chi Nhánh A2";
-            treeNode13.Text = "A2";
-            treeNode14.Name = "Chi Nhánh A";
-            treeNode14.Text = "Chi Nhánh A";
-            treeNode15.Name = "Chi Nhánh B";
-            treeNode15.Text = "Chi Nhánh B";
-            treeNode16.Name = "Chi Nhánh C";
-            treeNode16.Text = "Chi Nhánh C";
-            treeNode17.Name = "Chi Nhánh D1";
-            treeNode17.Text = "Chi Nhánh D1";
-            treeNode18.Name = "Chi Nhánh D";
-            treeNode18.Text = "Chi Nhánh D";
-            treeNode19.Name = "Chi Nhánh E1-1";
-            treeNode19.Text = "Chi Nhánh E1-1";
-            treeNode20.Name = "Chi Nhánh E1";
-            treeNode20.Text = "Chi Nhánh E1";
-            treeNode21.Name = "Chi Nhánh E1-2";
-            treeNode21.Text = "Chi Nhánh E1-2";
-            treeNode22.Name = "Chi Nhánh E";
-            treeNode22.Text = "Chi Nhánh E";
+            treeNode1.Name = "Chi Nhánh A1";
+            treeNode1.Text = "A1";
+            treeNode2.Name = "Chi Nhánh A2";
+            treeNode2.Text = "A2";
+            treeNode3.Name = "Chi Nhánh A";
+            treeNode3.Text = "Chi Nhánh A";
+            treeNode4.Name = "Chi Nhánh B";
+            treeNode4.Text = "Chi Nhánh B";
+            treeNode5.Name = "Chi Nhánh C";
+            treeNode5.Text = "Chi Nhánh C";
+            treeNode6.Name = "Chi Nhánh D1";
+            treeNode6.Text = "Chi Nhánh D1";
+            treeNode7.Name = "Chi Nhánh D";
+            treeNode7.Text = "Chi Nhánh D";
+            treeNode8.Name = "Chi Nhánh E1-1";
+            treeNode8.Text = "Chi Nhánh E1-1";
+            treeNode9.Name = "Chi Nhánh E1";
+            treeNode9.Text = "Chi Nhánh E1";
+            treeNode10.Name = "Chi Nhánh E1-2";
+            treeNode10.Text = "Chi Nhánh E1-2";
+            treeNode11.Name = "Chi Nhánh E";
+            treeNode11.Text = "Chi Nhánh E";
             this.treeView3.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode14,
-            treeNode15,
-            treeNode16,
-            treeNode18,
-            treeNode22});
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode7,
+            treeNode11});
             this.treeView3.Size = new System.Drawing.Size(204, 307);
             this.treeView3.TabIndex = 22;
             // 
@@ -1085,7 +1085,7 @@
             this.cmbChiNhanh.Name = "cmbChiNhanh";
             this.cmbChiNhanh.Size = new System.Drawing.Size(151, 21);
             this.cmbChiNhanh.TabIndex = 0;
-            this.cmbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cmbChiNhanh_SelectedIndexChanged);
+            this.cmbChiNhanh.SelectedValueChanged += new System.EventHandler(this.cmbChiNhanh_SelectedValueChanged);
             // 
             // label25
             // 
