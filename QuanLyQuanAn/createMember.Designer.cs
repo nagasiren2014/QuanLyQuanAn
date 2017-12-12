@@ -162,7 +162,7 @@
             this.Controls.Add(this.tbxSDT);
             this.Controls.Add(this.label1);
             this.Name = "createMember";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tạo thành viên";
             this.Load += new System.EventHandler(this.createMember_Load);
             this.ResumeLayout(false);
