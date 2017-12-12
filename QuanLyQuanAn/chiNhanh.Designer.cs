@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tbxTongCong = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbxPhiDichVu = new System.Windows.Forms.TextBox();
             this.lb_maDH = new System.Windows.Forms.Label();
             this.lb_mdh = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -81,7 +82,6 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tbxPhiDichVu = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -212,6 +212,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(322, 473);
             this.panel1.TabIndex = 13;
+            // 
+            // tbxPhiDichVu
+            // 
+            this.tbxPhiDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPhiDichVu.Location = new System.Drawing.Point(122, 373);
+            this.tbxPhiDichVu.Name = "tbxPhiDichVu";
+            this.tbxPhiDichVu.Size = new System.Drawing.Size(121, 26);
+            this.tbxPhiDichVu.TabIndex = 20;
+            this.tbxPhiDichVu.Text = "0";
+            this.tbxPhiDichVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbxPhiDichVu.TextChanged += new System.EventHandler(this.tbxPhiDichVu_TextChanged);
             // 
             // lb_maDH
             // 
@@ -584,7 +595,6 @@
             this.listView_DSBAN.TabIndex = 40;
             this.listView_DSBAN.UseCompatibleStateImageBehavior = false;
             this.listView_DSBAN.View = System.Windows.Forms.View.Details;
-            this.listView_DSBAN.SelectedIndexChanged += new System.EventHandler(this.listView_DSBAN_SelectedIndexChanged_1);
             // 
             // columnHeader1
             // 
@@ -599,17 +609,6 @@
             // 
             this.columnHeader3.Text = "Tổng tiền";
             this.columnHeader3.Width = 128;
-            // 
-            // tbxPhiDichVu
-            // 
-            this.tbxPhiDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPhiDichVu.Location = new System.Drawing.Point(122, 373);
-            this.tbxPhiDichVu.Name = "tbxPhiDichVu";
-            this.tbxPhiDichVu.Size = new System.Drawing.Size(121, 26);
-            this.tbxPhiDichVu.TabIndex = 20;
-            this.tbxPhiDichVu.Text = "0";
-            this.tbxPhiDichVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tbxPhiDichVu.TextChanged += new System.EventHandler(this.tbxPhiDichVu_TextChanged);
             // 
             // chiNhanh
             // 
